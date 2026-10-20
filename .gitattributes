@@ -1,0 +1,14 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.wasm binary
+*.zip binary
+*.tar binary
+.local export-ignore
+data export-ignore
+node_modules export-ignore
+dist export-ignore
+documentation/07-audit-qa export-ignore
+documentation/08-integrations-agents export-ignore
+documentation/09-audit-ui export-ignore
+documentation/10-open-source export-ignore

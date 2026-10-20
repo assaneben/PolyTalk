@@ -1,0 +1,22 @@
+[
+  {
+    "action": "actions/checkout",
+    "sha": "11d5960a326750d5838078e36cf38b85af677262",
+    "ref": "v4"
+  },
+  {
+    "action": "actions/setup-node",
+    "sha": "49933ea5288caeca8642d1e84afbd3f7d6820020",
+    "ref": "v4"
+  },
+  {
+    "action": "actions/upload-artifact",
+    "sha": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+    "ref": "v4"
+  },
+  {
+    "action": "github/codeql-action",
+    "sha": "ce5e7eeac396d720fe2d802714996c8ce561e311",
+    "ref": "v3"
+  }
+]

@@ -1,0 +1,64 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+services:
+  synapse:
+    volumes:
+      - synapse-config:/config:ro
+    depends_on:
+      synapse-config-init:
+        condition: service_completed_successfully
+  synapse-config-init:
+    image: ghcr.io/element-hq/synapse@sha256:97665cd4539dcf107c69fb6afdb720e1d1c9c09fb2b5701fb13d6c33b22cd8f0
+    user: '0:0'
+    entrypoint: [python, -c, "import os,shutil; os.chown('/config',991,991); os.chmod('/config',448); [(shutil.copyfile('/source/'+n,'/config/'+n),os.chown('/config/'+n,991,991),os.chmod('/config/'+n,384)) for n in ['homeserver.yaml','log.config']]"]
+    volumes:
+      - ../.local/synapse:/source:ro
+      - synapse-config:/config
+    network_mode: none
+  polytalk:
+    image: polytalk/server:0.1.0
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    restart: unless-stopped
+    init: true
+    read_only: true
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    tmpfs: ['/tmp:size=32m,mode=1777']
+    ports: [127.0.0.1:3210:3210]
+    environment:
+      HOST: 0.0.0.0
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:?HTTPS origin required}
+      MATRIX_UPSTREAM: http://synapse:8008
+      MATRIX_SERVER_NAME: ${MATRIX_SERVER_NAME:?Run container setup first}
+      POLYTALK_EDITION: intranet
+      POLICY_SECRET: ${POLICY_SECRET:?Run setup first}
+      REGISTRATION_SECRET: ${REGISTRATION_SECRET:?Run setup first}
+      SIGNUP_CODE: ${SIGNUP_CODE:-}
+      MATRIX_JWT_SECRET: ${MATRIX_JWT_SECRET:?Run setup first}
+      TRUSTED_PROXY_PEERS: ${TRUSTED_PROXY_PEERS:-}
+      POLYTALK_APPROVERS: ${POLYTALK_APPROVERS:-}
+    volumes: [polytalk-data:/data]
+    depends_on:
+      polytalk-storage-init:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3210/api/health').then(r=>r.json()).then(v=>process.exit(v.status==='ready'?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    networks: [matrix]
+  polytalk-storage-init:
+    image: polytalk/server:0.1.0
+    user: '0:0'
+    entrypoint: [node, -e, "const fs=require('node:fs');fs.chownSync('/data',1000,1000);fs.chmodSync('/data',448)"]
+    volumes: [polytalk-data:/data]
+    network_mode: none
+networks:
+  matrix:
+    internal: true
+volumes:
+  synapse-config:
+  polytalk-data:

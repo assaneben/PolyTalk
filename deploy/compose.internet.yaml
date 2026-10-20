@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Internet profile: same isolated internal services, externally terminated TLS.
+# The application listens only on host loopback; configure your TLS reverse proxy.
+services:
+  polytalk:
+    environment:
+      POLYTALK_EDITION: internet
+      WALLETCONNECT_PROJECT_ID: ${WALLETCONNECT_PROJECT_ID:-}
+networks:
+  matrix:
+    internal: false

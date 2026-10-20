@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Citez la révision de PolyTalk réellement utilisée."
+title: PolyTalk
+abstract: Communication chiffrée et coordination entre humains et agents indépendants.
+authors:
+  - name: PolyTalk contributors
+license: GPL-3.0-or-later
+version: 0.1.0
+keywords:
+  - messaging
+  - Matrix
+  - MCP
+  - agents

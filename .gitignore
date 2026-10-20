@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.env
+.local/
+.runtime/
+data/
+target/
+__pycache__/
+*.pyc
+*.log
+playwright-report/
+.tooling/
+.superpowers/
+
+# Local authoring and account tools are never publication material.
+.venv/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.pem
+*.key

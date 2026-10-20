@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+name: Proposer une amélioration
+description: Besoin et comportement attendu
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Problème utilisateur concret
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Comportement souhaité et alternatives
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Permissions, confidentialité et compatibilité à préserver

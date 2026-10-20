@@ -1,0 +1,2027 @@
+{
+  "schema": "polytalk.ux-architecture.v1",
+  "date": "2026-10-19",
+  "stage": "Étapes 1 et 2 — analyse et architecture, soumises à validation avant design system",
+  "groups": [
+    {
+      "id": "ACC",
+      "title": "Accès et inscription",
+      "role": "Visiteur ou titulaire du compte"
+    },
+    {
+      "id": "MSG",
+      "title": "Messagerie humaine",
+      "role": "Membre humain ou opérateur authentifié"
+    },
+    {
+      "id": "PAR",
+      "title": "Paramètres personnels",
+      "role": "Titulaire du compte authentifié"
+    },
+    {
+      "id": "AGT",
+      "title": "Travail avec les agents",
+      "role": "Opérateur autorisé ou agent pour ses propres actions"
+    },
+    {
+      "id": "SYS",
+      "title": "États transversaux et confirmations",
+      "role": "Rôle du parcours appelant"
+    }
+  ],
+  "screens": [
+    {
+      "id": "ACC01",
+      "group": "ACC",
+      "title": "Se connecter",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Se connecter",
+      "requirements": [
+        "F03",
+        "F06"
+      ],
+      "entry": "ACC01",
+      "success": "MSG01",
+      "cancel": "ACC01",
+      "failure": "ACC15",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC02",
+      "group": "ACC",
+      "title": "Créer un compte",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Créer mon compte",
+      "requirements": [
+        "F01",
+        "F02",
+        "F04"
+      ],
+      "entry": "ACC01",
+      "success": "ACC13",
+      "cancel": "ACC01",
+      "failure": "ACC15",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC03",
+      "group": "ACC",
+      "title": "Ouvrir un compte enregistré sur cet appareil",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Déverrouiller",
+      "requirements": [
+        "F06",
+        "F19"
+      ],
+      "entry": "ACC01",
+      "success": "MSG01",
+      "cancel": "ACC01",
+      "failure": "ACC15",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC04",
+      "group": "ACC",
+      "title": "Choisir un autre moyen de connexion",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Choisir ce moyen de connexion",
+      "requirements": [
+        "F16",
+        "F17",
+        "F18",
+        "F19"
+      ],
+      "entry": "ACC01",
+      "success": "ACC05",
+      "cancel": "ACC01",
+      "failure": "ACC15",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC05",
+      "group": "ACC",
+      "title": "Connexion avec une clé d’accès",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Utiliser ma clé d’accès",
+      "requirements": [
+        "F16"
+      ],
+      "entry": "ACC04",
+      "success": "MSG01",
+      "cancel": "ACC04",
+      "failure": "ACC15",
+      "module": "web/passkey-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC06",
+      "group": "ACC",
+      "title": "Choisir un wallet",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Connecter ce wallet",
+      "requirements": [
+        "F17"
+      ],
+      "entry": "ACC04",
+      "success": "ACC12",
+      "cancel": "ACC04",
+      "failure": "ACC15",
+      "module": "web/wallet-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC07",
+      "group": "ACC",
+      "title": "Connexion par QR WalletConnect",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Afficher le QR de connexion",
+      "requirements": [
+        "F18"
+      ],
+      "entry": "ACC06",
+      "success": "ACC12",
+      "cancel": "ACC06",
+      "failure": "ACC15",
+      "module": "web/wallet-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC08",
+      "group": "ACC",
+      "title": "Créer une identité locale",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Préparer mon identité",
+      "requirements": [
+        "F05"
+      ],
+      "entry": "ACC04",
+      "success": "ACC09",
+      "cancel": "ACC04",
+      "failure": "ACC15",
+      "module": "web/identity-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC09",
+      "group": "ACC",
+      "title": "Conserver le fichier d’identité et son code",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "J’ai conservé ma sauvegarde",
+      "requirements": [
+        "F05"
+      ],
+      "entry": "ACC08",
+      "success": "MSG01",
+      "cancel": "ACC08",
+      "failure": "ACC15",
+      "module": "web/identity-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC10",
+      "group": "ACC",
+      "title": "Restaurer une identité locale",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Restaurer et me connecter",
+      "requirements": [
+        "F05"
+      ],
+      "entry": "ACC04",
+      "success": "ACC12",
+      "cancel": "ACC04",
+      "failure": "ACC15",
+      "module": "web/identity-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC11",
+      "group": "ACC",
+      "title": "Réparer une association d’identité interrompue",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Vérifier et réparer l’association",
+      "requirements": [
+        "F05"
+      ],
+      "entry": "ACC10",
+      "success": "ACC12",
+      "cancel": "ACC10",
+      "failure": "ACC15",
+      "module": "web/identity-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC12",
+      "group": "ACC",
+      "title": "Confirmer la validation en deux étapes",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Vérifier mon code",
+      "requirements": [
+        "F16"
+      ],
+      "entry": "ACC01",
+      "success": "MSG01",
+      "cancel": "ACC01",
+      "failure": "ACC15",
+      "module": "web/security-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC13",
+      "group": "ACC",
+      "title": "Protéger le coffre d’un nouvel appareil",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Ouvrir mes conversations",
+      "requirements": [
+        "F06"
+      ],
+      "entry": "ACC01",
+      "success": "MSG01",
+      "cancel": "ACC01",
+      "failure": "ACC15",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC14",
+      "group": "ACC",
+      "title": "Comprendre le code d’invitation",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Revenir à l’inscription",
+      "requirements": [
+        "F04"
+      ],
+      "entry": "ACC02",
+      "success": "ACC02",
+      "cancel": "ACC02",
+      "failure": "ACC15",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC15",
+      "group": "ACC",
+      "title": "Aide à la connexion",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Revenir à la connexion",
+      "requirements": [
+        "F03"
+      ],
+      "entry": "ACC01",
+      "success": "ACC01",
+      "cancel": "ACC01",
+      "failure": "ACC15",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "ACC16",
+      "group": "ACC",
+      "title": "Installer PolyTalk sur cet appareil",
+      "role": "Visiteur ou titulaire du compte",
+      "primary_action": "Voir les instructions de mon appareil",
+      "requirements": [
+        "F40"
+      ],
+      "entry": "ACC01",
+      "success": "ACC01",
+      "cancel": "ACC01",
+      "failure": "ACC15",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG01",
+      "group": "MSG",
+      "title": "Accueil guidé",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Écrire un nouveau message",
+      "requirements": [
+        "F07",
+        "F42"
+      ],
+      "entry": "MSG01",
+      "success": "MSG04",
+      "cancel": "MSG01",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG02",
+      "group": "MSG",
+      "title": "Liste des conversations",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Ouvrir cette conversation",
+      "requirements": [
+        "F09",
+        "F12",
+        "F40"
+      ],
+      "entry": "MSG01",
+      "success": "MSG03",
+      "cancel": "MSG01",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG03",
+      "group": "MSG",
+      "title": "Conversation privée ou de groupe",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Envoyer",
+      "requirements": [
+        "F09",
+        "F10",
+        "F25"
+      ],
+      "entry": "MSG02",
+      "success": "MSG03",
+      "cancel": "MSG02",
+      "failure": "SYS08",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG04",
+      "group": "MSG",
+      "title": "Nouvelle conversation",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Créer la conversation et inviter",
+      "requirements": [
+        "F09"
+      ],
+      "entry": "MSG01",
+      "success": "MSG03",
+      "cancel": "MSG01",
+      "failure": "SYS07",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG05",
+      "group": "MSG",
+      "title": "Nouveau groupe",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Créer le groupe et inviter",
+      "requirements": [
+        "F09"
+      ],
+      "entry": "MSG04",
+      "success": "MSG03",
+      "cancel": "MSG04",
+      "failure": "SYS07",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG06",
+      "group": "MSG",
+      "title": "Informations de la conversation",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Voir les participants",
+      "requirements": [
+        "F09"
+      ],
+      "entry": "MSG03",
+      "success": "MSG07",
+      "cancel": "MSG03",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG07",
+      "group": "MSG",
+      "title": "Participants et appareils d’un contact",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Vérifier cet appareil",
+      "requirements": [
+        "F09",
+        "F16"
+      ],
+      "entry": "MSG06",
+      "success": "MSG18",
+      "cancel": "MSG06",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG08",
+      "group": "MSG",
+      "title": "Invitations et notifications",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Consulter cette invitation",
+      "requirements": [
+        "F08",
+        "F12"
+      ],
+      "entry": "MSG01",
+      "success": "MSG09",
+      "cancel": "MSG01",
+      "failure": "SYS06",
+      "module": "web/notifications-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG09",
+      "group": "MSG",
+      "title": "Détail d’une invitation",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Accepter l’invitation",
+      "requirements": [
+        "F08"
+      ],
+      "entry": "MSG08",
+      "success": "MSG03",
+      "cancel": "MSG08",
+      "failure": "SYS06",
+      "module": "web/notifications-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG10",
+      "group": "MSG",
+      "title": "Trouver un contact",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Vérifier ce destinataire",
+      "requirements": [
+        "F02",
+        "F14"
+      ],
+      "entry": "MSG01",
+      "success": "MSG11",
+      "cancel": "MSG01",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG11",
+      "group": "MSG",
+      "title": "Aperçu d’un contact",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Créer une conversation et inviter",
+      "requirements": [
+        "F14"
+      ],
+      "entry": "MSG10",
+      "success": "MSG03",
+      "cancel": "MSG10",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG12",
+      "group": "MSG",
+      "title": "Importer une carte ou une image QR",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Lire le fichier",
+      "requirements": [
+        "F14"
+      ],
+      "entry": "MSG10",
+      "success": "MSG11",
+      "cancel": "MSG10",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG13",
+      "group": "MSG",
+      "title": "Mon adresse, lien et QR code",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Copier mon adresse",
+      "requirements": [
+        "F14"
+      ],
+      "entry": "MSG01",
+      "success": "MSG13",
+      "cancel": "MSG01",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG14",
+      "group": "MSG",
+      "title": "Recherche dans les messages chargés",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Rechercher",
+      "requirements": [
+        "F11"
+      ],
+      "entry": "MSG01",
+      "success": "MSG15",
+      "cancel": "MSG01",
+      "failure": "SYS06",
+      "module": "web/message-search-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG15",
+      "group": "MSG",
+      "title": "Résultats de recherche",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Ouvrir ce message",
+      "requirements": [
+        "F11"
+      ],
+      "entry": "MSG14",
+      "success": "MSG03",
+      "cancel": "MSG14",
+      "failure": "SYS06",
+      "module": "web/message-search-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG16",
+      "group": "MSG",
+      "title": "Fichier préparé dans le message",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Envoyer",
+      "requirements": [
+        "F10"
+      ],
+      "entry": "MSG03",
+      "success": "MSG03",
+      "cancel": "MSG03",
+      "failure": "SYS06",
+      "module": "web/prepared-message.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG17",
+      "group": "MSG",
+      "title": "Téléchargement et déchiffrement d’un fichier",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Télécharger et déchiffrer",
+      "requirements": [
+        "F10"
+      ],
+      "entry": "MSG03",
+      "success": "MSG03",
+      "cancel": "MSG03",
+      "failure": "SYS08",
+      "module": "web/matrix-client.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG18",
+      "group": "MSG",
+      "title": "Comparaison des appareils",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Les éléments correspondent",
+      "requirements": [
+        "F16"
+      ],
+      "entry": "MSG07",
+      "success": "MSG03",
+      "cancel": "MSG07",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG19",
+      "group": "MSG",
+      "title": "Aide et premiers pas",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Choisir mon besoin",
+      "requirements": [
+        "F42"
+      ],
+      "entry": "MSG01",
+      "success": "MSG04",
+      "cancel": "MSG01",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "MSG20",
+      "group": "MSG",
+      "title": "Historique précédent de la conversation",
+      "role": "Membre humain ou opérateur authentifié",
+      "primary_action": "Charger les messages précédents",
+      "requirements": [
+        "F11"
+      ],
+      "entry": "MSG03",
+      "success": "MSG03",
+      "cancel": "MSG03",
+      "failure": "SYS06",
+      "module": "web/app.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR01",
+      "group": "PAR",
+      "title": "Toutes les rubriques de paramètres",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Choisir une rubrique",
+      "requirements": [
+        "F42"
+      ],
+      "entry": "PAR01",
+      "success": "PAR02",
+      "cancel": "PAR01",
+      "failure": "SYS06",
+      "module": "web/settings-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR02",
+      "group": "PAR",
+      "title": "Mon profil",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Enregistrer mon nom",
+      "requirements": [
+        "F01",
+        "F02"
+      ],
+      "entry": "PAR01",
+      "success": "PAR01",
+      "cancel": "PAR01",
+      "failure": "SYS06",
+      "module": "web/settings-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR03",
+      "group": "PAR",
+      "title": "Qui peut me contacter",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Enregistrer ma règle de réception",
+      "requirements": [
+        "F15"
+      ],
+      "entry": "PAR01",
+      "success": "PAR01",
+      "cancel": "PAR01",
+      "failure": "SYS06",
+      "module": "web/settings-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR04",
+      "group": "PAR",
+      "title": "Bloquer, autoriser ou retirer une règle de contact",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Enregistrer cette règle",
+      "requirements": [
+        "F15"
+      ],
+      "entry": "PAR03",
+      "success": "PAR03",
+      "cancel": "PAR03",
+      "failure": "SYS06",
+      "module": "web/settings-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR05",
+      "group": "PAR",
+      "title": "Notifications de cet appareil",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Enregistrer mon choix de notifications",
+      "requirements": [
+        "F12"
+      ],
+      "entry": "PAR01",
+      "success": "PAR01",
+      "cancel": "PAR01",
+      "failure": "SYS06",
+      "module": "web/settings-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR06",
+      "group": "PAR",
+      "title": "Connexion et sécurité",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Choisir une méthode de sécurité",
+      "requirements": [
+        "F16",
+        "F17",
+        "F19"
+      ],
+      "entry": "PAR01",
+      "success": "PAR07",
+      "cancel": "PAR01",
+      "failure": "SYS06",
+      "module": "web/settings-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR07",
+      "group": "PAR",
+      "title": "Configurer une application de codes temporaires",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Activer la validation en deux étapes",
+      "requirements": [
+        "F16"
+      ],
+      "entry": "PAR06",
+      "success": "PAR08",
+      "cancel": "PAR06",
+      "failure": "SYS06",
+      "module": "web/security-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR08",
+      "group": "PAR",
+      "title": "Conserver mes dix codes de secours",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "J’ai conservé mes codes",
+      "requirements": [
+        "F16"
+      ],
+      "entry": "PAR07",
+      "success": "PAR06",
+      "cancel": "PAR07",
+      "failure": "SYS06",
+      "module": "web/security-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR09",
+      "group": "PAR",
+      "title": "Désactiver la validation en deux étapes",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Confirmer la désactivation",
+      "requirements": [
+        "F16"
+      ],
+      "entry": "PAR06",
+      "success": "PAR06",
+      "cancel": "PAR06",
+      "failure": "SYS06",
+      "module": "web/security-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR10",
+      "group": "PAR",
+      "title": "Mes clés d’accès",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Ajouter une clé d’accès",
+      "requirements": [
+        "F16"
+      ],
+      "entry": "PAR06",
+      "success": "PAR11",
+      "cancel": "PAR06",
+      "failure": "SYS06",
+      "module": "web/passkey-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR11",
+      "group": "PAR",
+      "title": "Enregistrer une clé d’accès",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Confirmer l’ajout",
+      "requirements": [
+        "F16"
+      ],
+      "entry": "PAR10",
+      "success": "PAR10",
+      "cancel": "PAR10",
+      "failure": "SYS06",
+      "module": "web/passkey-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR12",
+      "group": "PAR",
+      "title": "Retirer une clé d’accès",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Confirmer le retrait",
+      "requirements": [
+        "F16"
+      ],
+      "entry": "PAR10",
+      "success": "PAR10",
+      "cancel": "PAR10",
+      "failure": "SYS06",
+      "module": "web/passkey-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR13",
+      "group": "PAR",
+      "title": "Mes wallets associés",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Associer un wallet",
+      "requirements": [
+        "F17",
+        "F18"
+      ],
+      "entry": "PAR06",
+      "success": "PAR14",
+      "cancel": "PAR06",
+      "failure": "SYS06",
+      "module": "web/wallet-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR14",
+      "group": "PAR",
+      "title": "Association d’un wallet",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Confirmer l’association",
+      "requirements": [
+        "F17"
+      ],
+      "entry": "PAR13",
+      "success": "PAR13",
+      "cancel": "PAR13",
+      "failure": "SYS06",
+      "module": "web/wallet-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR15",
+      "group": "PAR",
+      "title": "Retrait d’un wallet",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Confirmer le retrait",
+      "requirements": [
+        "F17"
+      ],
+      "entry": "PAR13",
+      "success": "PAR13",
+      "cancel": "PAR13",
+      "failure": "SYS06",
+      "module": "web/wallet-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR16",
+      "group": "PAR",
+      "title": "Déverrouillage local par clé d’accès",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Enregistrer mon choix",
+      "requirements": [
+        "F19"
+      ],
+      "entry": "PAR06",
+      "success": "PAR06",
+      "cancel": "PAR06",
+      "failure": "SYS06",
+      "module": "web/local-unlock-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR17",
+      "group": "PAR",
+      "title": "Appareils et sessions connectés",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Consulter cet appareil",
+      "requirements": [
+        "F20"
+      ],
+      "entry": "PAR01",
+      "success": "PAR18",
+      "cancel": "PAR01",
+      "failure": "SYS06",
+      "module": "web/sessions-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR18",
+      "group": "PAR",
+      "title": "Révoquer une autre session",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Retirer l’accès de cet appareil",
+      "requirements": [
+        "F20"
+      ],
+      "entry": "PAR17",
+      "success": "PAR17",
+      "cancel": "PAR17",
+      "failure": "SYS06",
+      "module": "web/sessions-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR19",
+      "group": "PAR",
+      "title": "Historique de sécurité",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Consulter les événements",
+      "requirements": [
+        "F16",
+        "F20"
+      ],
+      "entry": "PAR06",
+      "success": "PAR06",
+      "cancel": "PAR06",
+      "failure": "SYS06",
+      "module": "web/security-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR20",
+      "group": "PAR",
+      "title": "Sauvegarder mon identité locale",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Préparer une copie chiffrée",
+      "requirements": [
+        "F05"
+      ],
+      "entry": "PAR06",
+      "success": "PAR06",
+      "cancel": "PAR06",
+      "failure": "SYS06",
+      "module": "web/identity-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR21",
+      "group": "PAR",
+      "title": "Sauvegarder mes conversations",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Choisir sauvegarde ou restauration",
+      "requirements": [
+        "F21",
+        "F22"
+      ],
+      "entry": "PAR01",
+      "success": "PAR22",
+      "cancel": "PAR01",
+      "failure": "SYS06",
+      "module": "web/backup-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR22",
+      "group": "PAR",
+      "title": "Conserver le code de récupération des conversations",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "J’ai conservé mon code",
+      "requirements": [
+        "F21"
+      ],
+      "entry": "PAR21",
+      "success": "PAR23",
+      "cancel": "PAR21",
+      "failure": "SYS06",
+      "module": "web/backup-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR23",
+      "group": "PAR",
+      "title": "Activer la sauvegarde des conversations",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Activer la sauvegarde",
+      "requirements": [
+        "F21"
+      ],
+      "entry": "PAR22",
+      "success": "PAR21",
+      "cancel": "PAR22",
+      "failure": "SYS06",
+      "module": "web/backup-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR24",
+      "group": "PAR",
+      "title": "Restaurer les conversations sur cet appareil",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Restaurer mes conversations",
+      "requirements": [
+        "F21",
+        "F22"
+      ],
+      "entry": "PAR21",
+      "success": "PAR21",
+      "cancel": "PAR21",
+      "failure": "SYS08",
+      "module": "web/backup-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR25",
+      "group": "PAR",
+      "title": "Créer ou changer la phrase de restauration",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Enregistrer ma phrase",
+      "requirements": [
+        "F22"
+      ],
+      "entry": "PAR21",
+      "success": "PAR21",
+      "cancel": "PAR21",
+      "failure": "SYS06",
+      "module": "web/backup-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR26",
+      "group": "PAR",
+      "title": "Renouveler un code de récupération des conversations",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Confirmer le renouvellement",
+      "requirements": [
+        "F21",
+        "F22"
+      ],
+      "entry": "PAR21",
+      "success": "PAR21",
+      "cancel": "PAR21",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "PAR27",
+      "group": "PAR",
+      "title": "Désactiver la sauvegarde des conversations",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Confirmer mon choix",
+      "requirements": [
+        "F21"
+      ],
+      "entry": "PAR21",
+      "success": "PAR21",
+      "cancel": "PAR21",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "PAR28",
+      "group": "PAR",
+      "title": "Exporter un fichier de clés protégé",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Télécharger le fichier protégé",
+      "requirements": [
+        "F10"
+      ],
+      "entry": "PAR21",
+      "success": "PAR21",
+      "cancel": "PAR21",
+      "failure": "SYS06",
+      "module": "web/settings-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR29",
+      "group": "PAR",
+      "title": "Importer un fichier de clés protégé",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Restaurer les clés du fichier",
+      "requirements": [
+        "F10"
+      ],
+      "entry": "PAR21",
+      "success": "PAR21",
+      "cancel": "PAR21",
+      "failure": "SYS08",
+      "module": "web/settings-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "PAR30",
+      "group": "PAR",
+      "title": "Choisir un stockage cloud facultatif",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Choisir ce service",
+      "requirements": [
+        "F23"
+      ],
+      "entry": "PAR21",
+      "success": "PAR31",
+      "cancel": "PAR21",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "PAR31",
+      "group": "PAR",
+      "title": "Autoriser un stockage cloud",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Vérifier la connexion au service",
+      "requirements": [
+        "F23"
+      ],
+      "entry": "PAR30",
+      "success": "PAR32",
+      "cancel": "PAR30",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "PAR32",
+      "group": "PAR",
+      "title": "Fréquence et état de sauvegarde cloud",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Enregistrer cette sauvegarde",
+      "requirements": [
+        "F23"
+      ],
+      "entry": "PAR31",
+      "success": "PAR30",
+      "cancel": "PAR31",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "PAR33",
+      "group": "PAR",
+      "title": "Restaurer depuis un stockage cloud",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Restaurer la sauvegarde choisie",
+      "requirements": [
+        "F23"
+      ],
+      "entry": "PAR30",
+      "success": "PAR21",
+      "cancel": "PAR30",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "PAR34",
+      "group": "PAR",
+      "title": "Déconnecter un stockage cloud",
+      "role": "Titulaire du compte authentifié",
+      "primary_action": "Confirmer la déconnexion",
+      "requirements": [
+        "F23"
+      ],
+      "entry": "PAR30",
+      "success": "PAR30",
+      "cancel": "PAR30",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT01",
+      "group": "AGT",
+      "title": "Accueil des tâches et agents",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Consulter mes tâches",
+      "requirements": [
+        "F24",
+        "F26"
+      ],
+      "entry": "AGT01",
+      "success": "AGT08",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT02",
+      "group": "AGT",
+      "title": "Agents accessibles dans un canal",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Consulter cet agent",
+      "requirements": [
+        "F24"
+      ],
+      "entry": "AGT01",
+      "success": "AGT03",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT03",
+      "group": "AGT",
+      "title": "Fiche d’un agent et capacités déclarées",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Inviter cet agent dans un canal",
+      "requirements": [
+        "F24"
+      ],
+      "entry": "AGT02",
+      "success": "MSG05",
+      "cancel": "AGT02",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT04",
+      "group": "AGT",
+      "title": "Enregistrer ou modifier ma fiche agent",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Enregistrer ma fiche",
+      "requirements": [
+        "F24"
+      ],
+      "entry": "AGT03",
+      "success": "AGT03",
+      "cancel": "AGT03",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT05",
+      "group": "AGT",
+      "title": "Présence et réception d’un agent",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Vérifier la connexion de l’agent",
+      "requirements": [
+        "F13",
+        "F24"
+      ],
+      "entry": "AGT03",
+      "success": "AGT31",
+      "cancel": "AGT03",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT06",
+      "group": "AGT",
+      "title": "Règles de réponse du canal",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Enregistrer le mode du canal",
+      "requirements": [
+        "F30"
+      ],
+      "entry": "MSG06",
+      "success": "AGT08",
+      "cancel": "MSG06",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT07",
+      "group": "AGT",
+      "title": "Demande de collaboration structurée",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Envoyer cette demande aux agents choisis",
+      "requirements": [
+        "F25",
+        "F30"
+      ],
+      "entry": "MSG03",
+      "success": "AGT08",
+      "cancel": "MSG03",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT08",
+      "group": "AGT",
+      "title": "Liste et filtres des tâches",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Ouvrir cette tâche",
+      "requirements": [
+        "F26"
+      ],
+      "entry": "AGT01",
+      "success": "AGT10",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT09",
+      "group": "AGT",
+      "title": "Attribuer une tâche",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Envoyer les consignes et attribuer",
+      "requirements": [
+        "F26"
+      ],
+      "entry": "AGT08",
+      "success": "AGT10",
+      "cancel": "AGT08",
+      "failure": "SYS07",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT10",
+      "group": "AGT",
+      "title": "Détail et état d’une tâche",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Exécuter l’action autorisée pour cet état",
+      "requirements": [
+        "F26"
+      ],
+      "entry": "AGT08",
+      "success": "AGT08",
+      "cancel": "AGT08",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT11",
+      "group": "AGT",
+      "title": "Accepter une tâche reçue",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Accepter et démarrer",
+      "requirements": [
+        "F26"
+      ],
+      "entry": "AGT10",
+      "success": "AGT10",
+      "cancel": "AGT10",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT12",
+      "group": "AGT",
+      "title": "Transmettre le résultat d’une tâche",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Envoyer le résultat et terminer",
+      "requirements": [
+        "F26"
+      ],
+      "entry": "AGT10",
+      "success": "AGT10",
+      "cancel": "AGT10",
+      "failure": "SYS07",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT13",
+      "group": "AGT",
+      "title": "Demander une délégation",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Soumettre la sous-tâche",
+      "requirements": [
+        "F27"
+      ],
+      "entry": "AGT10",
+      "success": "AGT15",
+      "cancel": "AGT10",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT14",
+      "group": "AGT",
+      "title": "Fixer les limites de délégation",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Enregistrer les limites",
+      "requirements": [
+        "F27",
+        "F28"
+      ],
+      "entry": "AGT10",
+      "success": "AGT10",
+      "cancel": "AGT10",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT15",
+      "group": "AGT",
+      "title": "Approbations reçues",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Examiner cette demande",
+      "requirements": [
+        "F28"
+      ],
+      "entry": "AGT01",
+      "success": "AGT16",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT16",
+      "group": "AGT",
+      "title": "Examiner une approbation",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Confirmer ma décision",
+      "requirements": [
+        "F28"
+      ],
+      "entry": "AGT15",
+      "success": "AGT10",
+      "cancel": "AGT15",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT17",
+      "group": "AGT",
+      "title": "Annuler une tâche et ses sous-tâches",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Confirmer l’annulation",
+      "requirements": [
+        "F26",
+        "F27"
+      ],
+      "entry": "AGT10",
+      "success": "AGT08",
+      "cancel": "AGT10",
+      "failure": "SYS06",
+      "module": "web/coordination.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT18",
+      "group": "AGT",
+      "title": "Activité structurée en direct",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Actualiser les cartes de tâches",
+      "requirements": [
+        "F25",
+        "F26"
+      ],
+      "entry": "AGT01",
+      "success": "AGT08",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": "web/coordination-live.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT19",
+      "group": "AGT",
+      "title": "Mémoire privée d’un agent",
+      "role": "Agent propriétaire ; opérateur seulement si cet accès privé a été explicitement accordé.",
+      "primary_action": "Consulter une information mémorisée",
+      "requirements": [
+        "F29"
+      ],
+      "entry": "AGT01",
+      "success": "AGT20",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": "agent/src/inbox.rs",
+      "coverage": "Fonction dans le connecteur natif et MCP ; écran web distinct absent."
+    },
+    {
+      "id": "AGT20",
+      "group": "AGT",
+      "title": "Éditer une information de mémoire privée",
+      "role": "Agent propriétaire ; opérateur seulement si cet accès privé a été explicitement accordé.",
+      "primary_action": "Enregistrer cette information",
+      "requirements": [
+        "F29"
+      ],
+      "entry": "AGT19",
+      "success": "AGT08",
+      "cancel": "AGT19",
+      "failure": "SYS06",
+      "module": "agent/src/inbox.rs",
+      "coverage": "Fonction dans le connecteur natif et MCP ; écran web distinct absent."
+    },
+    {
+      "id": "AGT21",
+      "group": "AGT",
+      "title": "Oublier une information de mémoire privée",
+      "role": "Agent propriétaire ; opérateur seulement si cet accès privé a été explicitement accordé.",
+      "primary_action": "Confirmer l’oubli",
+      "requirements": [
+        "F29"
+      ],
+      "entry": "AGT19",
+      "success": "AGT08",
+      "cancel": "AGT19",
+      "failure": "SYS06",
+      "module": "agent/src/inbox.rs",
+      "coverage": "Fonction dans le connecteur natif et MCP ; écran web distinct absent."
+    },
+    {
+      "id": "AGT22",
+      "group": "AGT",
+      "title": "Procédures réutilisables d’un agent",
+      "role": "Agent propriétaire ; opérateur seulement si cet accès privé a été explicitement accordé.",
+      "primary_action": "Consulter cette procédure",
+      "requirements": [
+        "F29"
+      ],
+      "entry": "AGT01",
+      "success": "AGT23",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": "agent/src/inbox.rs",
+      "coverage": "Fonction dans le connecteur natif et MCP ; écran web distinct absent."
+    },
+    {
+      "id": "AGT23",
+      "group": "AGT",
+      "title": "Version d’une procédure réutilisable",
+      "role": "Agent propriétaire ; opérateur seulement si cet accès privé a été explicitement accordé.",
+      "primary_action": "Enregistrer cette version",
+      "requirements": [
+        "F29"
+      ],
+      "entry": "AGT22",
+      "success": "AGT08",
+      "cancel": "AGT22",
+      "failure": "SYS06",
+      "module": "agent/src/inbox.rs",
+      "coverage": "Fonction dans le connecteur natif et MCP ; écran web distinct absent."
+    },
+    {
+      "id": "AGT24",
+      "group": "AGT",
+      "title": "Utiliser une procédure dans une tâche",
+      "role": "Agent propriétaire ; opérateur seulement si cet accès privé a été explicitement accordé.",
+      "primary_action": "Confirmer l’utilisation autorisée",
+      "requirements": [
+        "F29"
+      ],
+      "entry": "AGT22",
+      "success": "AGT08",
+      "cancel": "AGT22",
+      "failure": "SYS06",
+      "module": "agent/src/inbox.rs",
+      "coverage": "Fonction dans le connecteur natif et MCP ; écran web distinct absent."
+    },
+    {
+      "id": "AGT25",
+      "group": "AGT",
+      "title": "Modèles d’équipes d’agents",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Choisir importer ou exporter",
+      "requirements": [
+        "F37"
+      ],
+      "entry": "AGT01",
+      "success": "AGT27",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": "web/team-transfer-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT26",
+      "group": "AGT",
+      "title": "Exporter les agents choisis d’un canal",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Télécharger le modèle",
+      "requirements": [
+        "F37"
+      ],
+      "entry": "AGT25",
+      "success": "AGT25",
+      "cancel": "AGT25",
+      "failure": "SYS06",
+      "module": "web/team-transfer-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT27",
+      "group": "AGT",
+      "title": "Importer et vérifier un modèle d’équipe",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Vérifier les agents du fichier",
+      "requirements": [
+        "F37"
+      ],
+      "entry": "AGT25",
+      "success": "AGT28",
+      "cancel": "AGT25",
+      "failure": "SYS06",
+      "module": "web/team-transfer-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT28",
+      "group": "AGT",
+      "title": "Confirmer les invitations d’une équipe",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Créer le canal chiffré et inviter",
+      "requirements": [
+        "F37"
+      ],
+      "entry": "AGT27",
+      "success": "MSG03",
+      "cancel": "AGT27",
+      "failure": "SYS07",
+      "module": "web/team-transfer-ui.js",
+      "coverage": "Surface correspondante dans le code ; regroupement et comportement détaillé à spécifier après validation."
+    },
+    {
+      "id": "AGT29",
+      "group": "AGT",
+      "title": "Connexions et connecteurs de mes agents",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Consulter ce connecteur",
+      "requirements": [
+        "F32",
+        "F33",
+        "F34",
+        "F35"
+      ],
+      "entry": "AGT01",
+      "success": "AGT30",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT30",
+      "group": "AGT",
+      "title": "Configurer un connecteur autorisé",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Enregistrer la configuration",
+      "requirements": [
+        "F32",
+        "F33",
+        "F34",
+        "F35"
+      ],
+      "entry": "AGT29",
+      "success": "AGT31",
+      "cancel": "AGT29",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT31",
+      "group": "AGT",
+      "title": "Diagnostic d’un connecteur",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Lancer le test de connexion",
+      "requirements": [
+        "F13",
+        "F32",
+        "F33",
+        "F34"
+      ],
+      "entry": "AGT29",
+      "success": "AGT08",
+      "cancel": "AGT29",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT32",
+      "group": "AGT",
+      "title": "Permissions du moteur et exécution isolée",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Enregistrer les permissions autorisées",
+      "requirements": [
+        "F28",
+        "F38"
+      ],
+      "entry": "AGT29",
+      "success": "AGT08",
+      "cancel": "AGT29",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT33",
+      "group": "AGT",
+      "title": "Automatisations récurrentes",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Créer une routine",
+      "requirements": [
+        "F36"
+      ],
+      "entry": "AGT01",
+      "success": "AGT34",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT34",
+      "group": "AGT",
+      "title": "Configurer une routine",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Enregistrer la routine",
+      "requirements": [
+        "F36"
+      ],
+      "entry": "AGT33",
+      "success": "AGT08",
+      "cancel": "AGT33",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT35",
+      "group": "AGT",
+      "title": "Historique d’une routine",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Consulter cette exécution",
+      "requirements": [
+        "F36"
+      ],
+      "entry": "AGT33",
+      "success": "AGT08",
+      "cancel": "AGT33",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT36",
+      "group": "AGT",
+      "title": "Déclencheurs externes",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Créer un déclencheur",
+      "requirements": [
+        "F36"
+      ],
+      "entry": "AGT01",
+      "success": "AGT37",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT37",
+      "group": "AGT",
+      "title": "Configurer un déclencheur externe",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Enregistrer le déclencheur",
+      "requirements": [
+        "F36"
+      ],
+      "entry": "AGT36",
+      "success": "AGT08",
+      "cancel": "AGT36",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT38",
+      "group": "AGT",
+      "title": "Livraison et erreurs des déclencheurs",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Consulter cette livraison",
+      "requirements": [
+        "F36"
+      ],
+      "entry": "AGT36",
+      "success": "AGT08",
+      "cancel": "AGT36",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT39",
+      "group": "AGT",
+      "title": "Routage automatique des demandes",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Enregistrer la règle de routage",
+      "requirements": [
+        "F31"
+      ],
+      "entry": "AGT01",
+      "success": "AGT40",
+      "cancel": "AGT01",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "AGT40",
+      "group": "AGT",
+      "title": "Comprendre un choix de routage",
+      "role": "Opérateur autorisé ou agent pour ses propres actions",
+      "primary_action": "Voir la justification disponible",
+      "requirements": [
+        "F31"
+      ],
+      "entry": "AGT39",
+      "success": "AGT08",
+      "cancel": "AGT39",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "Écran cible distinct absent du client web actuel. Ne pas présenter cette capacité comme déployée."
+    },
+    {
+      "id": "SYS01",
+      "group": "SYS",
+      "title": "Installation indisponible",
+      "role": "Rôle du parcours appelant",
+      "primary_action": "Vérifier de nouveau la connexion",
+      "requirements": [
+        "F39"
+      ],
+      "entry": "@context",
+      "success": "@context",
+      "cancel": "@context",
+      "failure": "SYS06",
+      "module": "web/private-view.js",
+      "coverage": "État ou composant transversal : réalisation actuelle partielle, contrat commun à harmoniser.",
+      "context_rule": "Retour contrôlé par une destination interne autorisée, liée au compte et au parcours appelants. Après perte de session, effacer les données privées et revenir à ACC01."
+    },
+    {
+      "id": "SYS02",
+      "group": "SYS",
+      "title": "Connexion interrompue pendant une session",
+      "role": "Rôle du parcours appelant",
+      "primary_action": "Réessayer la connexion",
+      "requirements": [
+        "F06",
+        "F13"
+      ],
+      "entry": "@context",
+      "success": "@context",
+      "cancel": "@context",
+      "failure": "SYS06",
+      "module": "web/private-view.js",
+      "coverage": "État ou composant transversal : réalisation actuelle partielle, contrat commun à harmoniser.",
+      "context_rule": "Retour contrôlé par une destination interne autorisée, liée au compte et au parcours appelants. Après perte de session, effacer les données privées et revenir à ACC01."
+    },
+    {
+      "id": "SYS03",
+      "group": "SYS",
+      "title": "Session expirée ou révoquée",
+      "role": "Rôle du parcours appelant",
+      "primary_action": "Me reconnecter",
+      "requirements": [
+        "F06",
+        "F20"
+      ],
+      "entry": "@context",
+      "success": "ACC01",
+      "cancel": "ACC01",
+      "failure": "ACC15",
+      "module": "web/private-view.js",
+      "coverage": "État ou composant transversal : réalisation actuelle partielle, contrat commun à harmoniser.",
+      "context_rule": "Effacer immédiatement les vues privées et le moyen de reprise ; aucune sortie vers un espace protégé avant nouvelle authentification."
+    },
+    {
+      "id": "SYS04",
+      "group": "SYS",
+      "title": "Confirmer une action sensible ou destructive",
+      "role": "Rôle du parcours appelant",
+      "primary_action": "Confirmer cette action précise",
+      "requirements": [
+        "F15",
+        "F16",
+        "F20",
+        "F28"
+      ],
+      "entry": "@context",
+      "success": "@context",
+      "cancel": "@context",
+      "failure": "SYS06",
+      "module": "web/private-view.js",
+      "coverage": "État ou composant transversal : réalisation actuelle partielle, contrat commun à harmoniser.",
+      "context_rule": "Retour contrôlé par une destination interne autorisée, liée au compte et au parcours appelants. Après perte de session, effacer les données privées et revenir à ACC01."
+    },
+    {
+      "id": "SYS05",
+      "group": "SYS",
+      "title": "Quitter avec une saisie non enregistrée",
+      "role": "Rôle du parcours appelant",
+      "primary_action": "Continuer ma saisie",
+      "requirements": [
+        "F42"
+      ],
+      "entry": "@context",
+      "success": "@context",
+      "cancel": "@context",
+      "failure": "SYS06",
+      "module": null,
+      "coverage": "État cible de confirmation avant perte de saisie ; couverture actuelle incomplète.",
+      "context_rule": "Retour contrôlé par une destination interne autorisée, liée au compte et au parcours appelants. Après perte de session, effacer les données privées et revenir à ACC01."
+    },
+    {
+      "id": "SYS06",
+      "group": "SYS",
+      "title": "Permission ou fonctionnalité indisponible",
+      "role": "Rôle du parcours appelant",
+      "primary_action": "Revenir à une option disponible",
+      "requirements": [
+        "F18",
+        "F23",
+        "F34",
+        "F35",
+        "F38"
+      ],
+      "entry": "@context",
+      "success": "@context",
+      "cancel": "@context",
+      "failure": "SYS06",
+      "module": "web/private-view.js",
+      "coverage": "État ou composant transversal : réalisation actuelle partielle, contrat commun à harmoniser.",
+      "context_rule": "Retour contrôlé par une destination interne autorisée, liée au compte et au parcours appelants. Après perte de session, effacer les données privées et revenir à ACC01."
+    },
+    {
+      "id": "SYS07",
+      "group": "SYS",
+      "title": "Résultat partiel ou création incertaine",
+      "role": "Rôle du parcours appelant",
+      "primary_action": "Vérifier l’état avant un nouvel essai",
+      "requirements": [
+        "F09",
+        "F26",
+        "F37"
+      ],
+      "entry": "@context",
+      "success": "@context",
+      "cancel": "@context",
+      "failure": "SYS06",
+      "module": "web/private-view.js",
+      "coverage": "État ou composant transversal : réalisation actuelle partielle, contrat commun à harmoniser.",
+      "context_rule": "Retour contrôlé par une destination interne autorisée, liée au compte et au parcours appelants. Après perte de session, effacer les données privées et revenir à ACC01."
+    },
+    {
+      "id": "SYS08",
+      "group": "SYS",
+      "title": "Message dont les clés sont indisponibles",
+      "role": "Rôle du parcours appelant",
+      "primary_action": "Ouvrir la restauration des conversations",
+      "requirements": [
+        "F10",
+        "F21"
+      ],
+      "entry": "@context",
+      "success": "PAR24",
+      "cancel": "@context",
+      "failure": "SYS06",
+      "module": "web/private-view.js",
+      "coverage": "État ou composant transversal : réalisation actuelle partielle, contrat commun à harmoniser.",
+      "context_rule": "Retour contrôlé par une destination interne autorisée, liée au compte et au parcours appelants. Après perte de session, effacer les données privées et revenir à ACC01."
+    },
+    {
+      "id": "SYS09",
+      "group": "SYS",
+      "title": "Installation sur appareil et compatibilité",
+      "role": "Rôle du parcours appelant",
+      "primary_action": "Voir la procédure adaptée à mon appareil",
+      "requirements": [
+        "F40"
+      ],
+      "entry": "@context",
+      "success": "ACC16",
+      "cancel": "@context",
+      "failure": "SYS06",
+      "module": "web/private-view.js",
+      "coverage": "État ou composant transversal : réalisation actuelle partielle, contrat commun à harmoniser.",
+      "context_rule": "Retour contrôlé par une destination interne autorisée, liée au compte et au parcours appelants. Après perte de session, effacer les données privées et revenir à ACC01."
+    },
+    {
+      "id": "SYS10",
+      "group": "SYS",
+      "title": "Diagnostic et aide pour l’administrateur",
+      "role": "Rôle du parcours appelant",
+      "primary_action": "Copier les informations non sensibles du diagnostic",
+      "requirements": [
+        "F39",
+        "F41"
+      ],
+      "entry": "@context",
+      "success": "SYS10",
+      "cancel": "@context",
+      "failure": "SYS06",
+      "module": "scripts/doctor.mjs",
+      "coverage": "Diagnostic CLI existant ; présentation web dédiée absente.",
+      "context_rule": "Retour contrôlé par une destination interne autorisée, liée au compte et au parcours appelants. Après perte de session, effacer les données privées et revenir à ACC01."
+    }
+  ],
+  "approval_required_before": "Étape 3 — design system",
+  "scope": "F01 à F42 ; les opérations d’administration sont documentées comme procédures externes sécurisées, pas comme une console disposant des clés privées des utilisateurs.",
+  "context_return": {
+    "token": "@context",
+    "allowed": "Identifiant de cet inventaire uniquement ; jamais URL libre, destination externe ou script.",
+    "binding": "Compte, génération de session et parcours appelants. Aucun contenu privé nécessaire dans le paramètre de retour.",
+    "validation": "Vérifier session, rôle et droit actuel sur la ressource avant restauration. Ne pas réutiliser un formulaire ou une opération d’une autre génération.",
+    "fallback_authenticated": "MSG01 lorsque la session est valide mais que le contexte n’est plus accessible.",
+    "fallback_unauthenticated": "ACC01 avec effacement des vues privées.",
+    "side_effects": "Annuler ne rejoue aucune mutation. Une reprise d’opération incertaine vérifie d’abord son identifiant serveur et son état."
+  }
+}

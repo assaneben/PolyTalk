@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+name: Poser une question
+description: Aide communautaire sans secrets
+labels: [question]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question et guides déjà consultés
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Version et environnement concernés

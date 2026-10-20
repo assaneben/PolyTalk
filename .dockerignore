@@ -1,0 +1,14 @@
+**
+!package.json
+!package-lock.json
+!web/
+!web/**
+!scripts/
+!scripts/build.mjs
+!server/
+!server/**
+!deploy/
+!deploy/Dockerfile
+
+!LICENSE
+!THIRD_PARTY_NOTICES.md

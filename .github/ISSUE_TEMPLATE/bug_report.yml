@@ -1,0 +1,40 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+name: Signaler un bug
+description: Défaut reproductible sans données privées
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Ne publiez aucun secret ou compte réel. Pour une vulnérabilité, lire SECURITY.md."
+  - type: input
+    id: version
+    attributes:
+      label: Version et commit
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes et données synthétiques
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Résultat attendu et résultat observé
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: OS, navigateur et versions Node/Docker/Rust concernés
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Confidentialité
+      options:
+        - label: J'ai retiré secrets, données personnelles et conversations réelles.
+          required: true

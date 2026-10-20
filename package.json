@@ -1,0 +1,67 @@
+{
+  "name": "polytalk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node server/index.mjs",
+    "dev": "node scripts/build.mjs && node server/index.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:matrix": "node --test tests/matrix.integration.mjs",
+    "setup": "node scripts/setup.mjs",
+    "build:agent": "cargo +1.99.1 build --release --manifest-path agent/Cargo.toml --locked",
+    "test:agent": "cargo +1.99.1 test --manifest-path agent/Cargo.toml --locked",
+    "test:agent:matrix": "node --test --test-force-exit tests/agent.integration.mjs",
+    "agent:mcp": "node agent/adapters/mcp.mjs",
+    "test:mcp:matrix": "node --test --test-force-exit tests/mcp-native.integration.mjs",
+    "test:agent:recovery": "node --test --test-force-exit tests/agent-recovery.integration.mjs",
+    "agent:a2a": "node agent/adapters/a2a.mjs",
+    "test:identity:matrix": "node --test tests/identity.integration.mjs",
+    "test:wallet:matrix": "node --test tests/wallet.integration.mjs",
+    "export:offline": "node scripts/export-offline.mjs",
+    "test:offline": "node --test tests/offline.integration.mjs",
+    "build:agent:debug": "cargo +1.99.1 build --manifest-path agent/Cargo.toml --locked",
+    "test:agent:history": "node --test --test-force-exit tests/agent-history.integration.mjs",
+    "test:security:matrix": "node --test tests/security.integration.mjs",
+    "test:backup:matrix": "node --test --test-force-exit tests/automatic-backup.integration.mjs",
+    "test:relay:matrix": "node --test --test-force-exit tests/local-relay.integration.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "verify": "node scripts/verify-release.mjs local",
+    "verify:runtime": "node scripts/verify-release.mjs runtime",
+    "verify:release": "node scripts/verify-release.mjs release",
+    "agent:cli": "node agent/adapters/cli.mjs",
+    "agent:corpus": "node scripts/agent-corpus.mjs",
+    "agent:config": "node scripts/agent-integrations.mjs",
+    "test:context:real": "node --test tests/context-tools.integration.mjs",
+    "lint": "node scripts/lint.mjs",
+    "export:public": "node scripts/export-public.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "@simplewebauthn/browser": "14.0.0",
+    "@simplewebauthn/server": "14.0.3",
+    "@walletconnect/sign-client": "2.26.0",
+    "ethers": "6.17.0",
+    "jsqr": "1.4.0",
+    "matrix-js-sdk": "44.0.0",
+    "qrcode": "1.5.4",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "license": "GPL-3.0-or-later",
+  "packageManager": "npm@11.6.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assaneben/PolyTalk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/assaneben/PolyTalk/issues"
+  },
+  "homepage": "https://github.com/assaneben/PolyTalk#readme"
+}

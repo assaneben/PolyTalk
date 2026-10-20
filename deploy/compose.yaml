@@ -1,0 +1,57 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+name: polytalk
+services:
+  postgres:
+    image: postgres:16-alpine@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: synapse
+      POSTGRES_USER: synapse
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run npm run setup first}
+      POSTGRES_INITDB_ARGS: --encoding=UTF8 --locale=C
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U synapse -d synapse]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [matrix]
+  synapse:
+    image: ghcr.io/element-hq/synapse@sha256:97665cd4539dcf107c69fb6afdb720e1d1c9c09fb2b5701fb13d6c33b22cd8f0
+    restart: unless-stopped
+    depends_on:
+      synapse-storage-init:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+    environment:
+      SYNAPSE_CONFIG_PATH: /config/homeserver.yaml
+      PYTHONPATH: /modules
+    ports:
+      # Development/test ingress only. Production ingress goes through Polytalk.
+      - 127.0.0.1:8008:8008
+    volumes:
+      - ../.local/synapse:/config:ro
+      - ./synapse:/modules:ro
+      - synapse-data:/data
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8008/health', timeout=3)"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    networks: [matrix]
+  synapse-storage-init:
+    image: ghcr.io/element-hq/synapse@sha256:97665cd4539dcf107c69fb6afdb720e1d1c9c09fb2b5701fb13d6c33b22cd8f0
+    user: '0:0'
+    entrypoint: [python, -c, "import os; os.chown('/data', 991, 991)"]
+    volumes:
+      - synapse-data:/data
+    network_mode: none
+networks:
+  matrix:
+volumes:
+  postgres-data:
+  synapse-data:

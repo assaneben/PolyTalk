@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Catalogue ; son existence ne crée pas automatiquement les labels sur GitHub.
+- name: bug
+  color: d73a4a
+  description: Défaut reproductible
+- name: enhancement
+  color: a2eeef
+  description: Amélioration proposée
+- name: documentation
+  color: 0075ca
+  description: Guides et contrats
+- name: question
+  color: d876e3
+  description: Aide et clarification
+- name: good first issue
+  color: 7057ff
+  description: Contribution bornée pour débuter
