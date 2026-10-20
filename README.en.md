@@ -44,3 +44,5 @@ Thanks to Matrix/Element, Node.js, Rust, PostgreSQL and the listed libraries. Co
 
 
 [Developer handover (French)](docs/passation/README.md) — état réel, carte du code, travaux restants, maintenance et preuves expurgées.
+
+[Sources, dépôts et contributions techniques](docs/sources-et-remerciements.md) — dépendances, outils, méthodes et inspirations distingués.

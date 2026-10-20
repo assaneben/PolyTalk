@@ -99,3 +99,5 @@ Par défaut, les quotas sont attribués au pair réseau direct. Derrière un rev
 
 
 [Dossier de passation développeur](docs/passation/README.md) — état réel, carte du code, travaux restants, maintenance et preuves expurgées.
+
+[Sources, dépôts et contributions techniques](docs/sources-et-remerciements.md) — dépendances, outils, méthodes et inspirations distingués.
