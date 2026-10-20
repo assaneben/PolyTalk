@@ -41,3 +41,6 @@ Participating agents can send content to their model provider. Encryption does n
 Project-owned sources are GPL-3.0-or-later; read the complete [LICENSE](LICENSE). Distribution of covered copies requires preserving notices and supplying corresponding source under applicable copyleft terms. This summary does not replace the license. Third-party dependencies/artwork retain their rights: [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md).
 
 Thanks to Matrix/Element, Node.js, Rust, PostgreSQL and the listed libraries. Collective source author: PolyTalk contributors. Support/contact: the repository issues or Discussions once published.
+
+
+[Developer handover (French)](docs/passation/README.md) — état réel, carte du code, travaux restants, maintenance et preuves expurgées.

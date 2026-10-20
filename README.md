@@ -66,7 +66,7 @@ Les sources propres au projet sont sous **GPL-3.0-or-later** : utilisation, étu
 
 [Contribuer](CONTRIBUTING.md) · [Code de conduite](CODE_OF_CONDUCT.md) · [Sécurité](SECURITY.md) · [Support](SUPPORT.md) · [Confidentialité](docs/confidentialite.md) · [Changelog](CHANGELOG.md) · [Publication GitHub](docs/publication-github.md).
 
-Auteur collectif déclaré : PolyTalk contributors. Contact public : issues/Discussions du dépôt une fois publié ; aucun email personnel non confirmé n'est inventé. Le canal privé de sécurité doit être activé par le responsable.
+Auteur collectif déclaré : PolyTalk contributors. Contact public : issues/Discussions du dépôt ; aucun email personnel non confirmé n'est inventé. Le signalement privé des vulnérabilités est activé sur GitHub.
 
 Merci aux projets Matrix/Element, Node.js, Rust, PostgreSQL et aux bibliothèques des avis tiers. Les rapports historiques sont des photographies datées, pas une certification de la version courante.
 
@@ -96,3 +96,6 @@ Par défaut, les quotas sont attribués au pair réseau direct. Derrière un rev
 
 
 <!-- offline-install:end -->
+
+
+[Dossier de passation développeur](docs/passation/README.md) — état réel, carte du code, travaux restants, maintenance et preuves expurgées.

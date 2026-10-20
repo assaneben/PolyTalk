@@ -2,19 +2,89 @@
   "schema": "polytalk.public-source.v1",
   "files": [
     {
-      "path": "README.md",
-      "bytes": 7331,
-      "sha256": "c5ec234bc072bbdd3a784cb5be0e787b18760091f3e997a30e3922182bc9914a"
+      "path": ".dockerignore",
+      "bytes": 161,
+      "sha256": "b3a47a5e95f3b05826648b09e8bb6bdee4dd1cff9082401cd1a364009ddb2c76"
     },
     {
-      "path": "README.en.md",
-      "bytes": 3460,
-      "sha256": "885714e0f1509221e863b302965eb57251b1793553ff9e1138085ce9cfc3bfa1"
+      "path": ".editorconfig",
+      "bytes": 186,
+      "sha256": "9ff02b5f94e6cd180b657b690fe8a76936ea9f2f376e7bb0ce327130008b5b24"
     },
     {
-      "path": "LICENSE",
-      "bytes": 35149,
-      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      "path": ".env.example",
+      "bytes": 1429,
+      "sha256": "379700af52e732a10ab6a4ec3c4a18a607108e0249108e52834765713b6d255c"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 345,
+      "sha256": "bee93880a5568fe270a8c2c1b06a5605d76d979046e8b1361ced2c7ef1e7412f"
+    },
+    {
+      "path": ".github/CODEOWNERS",
+      "bytes": 121,
+      "sha256": "553c2540fb45033ea399003ad7f255c315431b693f4dcf74b404f705b58f0231"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "bytes": 1068,
+      "sha256": "600b14205cce0fa7af77d2c7a7aeb0d11ce094f4fa22411646a1d0453d4a45a4"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "bytes": 72,
+      "sha256": "4c0dc940346c1fca72894ae15a744d60a5510178a0c92abb1008c8b83628b7b5"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "bytes": 544,
+      "sha256": "71e0e113879cec815bf1340a85860cdd9a14ea343856e61556d79a24bbf658ff"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/question.yml",
+      "bytes": 380,
+      "sha256": "8f863070103d7419bd401d09f39db7dc2037fc20fae3f46aa9c97f6a5661873b"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "bytes": 580,
+      "sha256": "ab671692aee1eba9caa0f6f3a101eb7978b6182dc986e5c1e91b4f663abee0e7"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "bytes": 543,
+      "sha256": "59eb15e09609ff9546e5e80d9de410eccb8fe3b75d67d8dee9cef85381f16010"
+    },
+    {
+      "path": ".github/labels.yml",
+      "bytes": 497,
+      "sha256": "eb5366608cc50d2b50a88f983cead7701b093e42fe1e9b725039b40ae4a95a4a"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 1045,
+      "sha256": "76b8c1664ea1bfd572f19ce37aa7d59ae20c2bd7ddd2444451b2c22efcfc5b93"
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "bytes": 619,
+      "sha256": "f3c72aca1c5a425f2b3516cf87f111bfe7a9d7535b206c2c7866fbdc3941cd6d"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "bytes": 1138,
+      "sha256": "025059456f617da16c348e350d1bf622f7e1ab59a6a8a9494629da55cbda416c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 253,
+      "sha256": "7dada141c1e6392cc5336018b0c99e3d7dc893865ce8b6beed8ae943f6a4e528"
+    },
+    {
+      "path": ".nvmrc",
+      "bytes": 8,
+      "sha256": "55ce66383dffcaf804e6d3b03993b0d332cb5d7c38e26e9f92fb78ab040dc70c"
     },
     {
       "path": "CHANGELOG.md",
@@ -22,14 +92,34 @@
       "sha256": "6819132b18df7c807ac3bbf8da00248413e985437bc27e0c11bb6cec6d47e638"
     },
     {
-      "path": "CONTRIBUTING.md",
-      "bytes": 1608,
-      "sha256": "aded6cfc3db1f975575e5e657717d9d53d501ce22da7330d0001b6c2f8761f82"
+      "path": "CITATION.cff",
+      "bytes": 325,
+      "sha256": "6c35ee139f23f1219b88962e617fafbe252a58a4f8658d555deeca4dc3524383"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
       "bytes": 5672,
       "sha256": "7969e66fd9993757208efe77c00f556d247715e1679a53ee877bc8b419d0c161"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 1608,
+      "sha256": "aded6cfc3db1f975575e5e657717d9d53d501ce22da7330d0001b6c2f8761f82"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "README.en.md",
+      "bytes": 3603,
+      "sha256": "95ba70fb57d74660b73f4ec4fe829bf93b8200dd66f098e62414384596e79884"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7461,
+      "sha256": "cca011035fb0a071e215294291435b796b4a4268d93b56ac6fb55e21d42980cd"
     },
     {
       "path": "SECURITY.md",
@@ -42,354 +132,9 @@
       "sha256": "3135b83d9586f80b2f3801a1c2c547ed6a912d8b0c3b1280c74436470e10ca64"
     },
     {
-      "path": "CITATION.cff",
-      "bytes": 325,
-      "sha256": "6c35ee139f23f1219b88962e617fafbe252a58a4f8658d555deeca4dc3524383"
-    },
-    {
       "path": "THIRD_PARTY_NOTICES.md",
       "bytes": 1884,
       "sha256": "4df1feb141b222f3469f13304f4398b2de7f30f2daeb8949a672f2b063e2cbe2"
-    },
-    {
-      "path": "package.json",
-      "bytes": 2915,
-      "sha256": "2bcf0aeaf067618770ce641d2eb9e7112f17418c8e55c18e2bc669307958789d"
-    },
-    {
-      "path": "package-lock.json",
-      "bytes": 134780,
-      "sha256": "9dfb37b2460ed343f85d5ff37a43739d94a4bb82ce0af747eab8107de3b7b157"
-    },
-    {
-      "path": ".gitignore",
-      "bytes": 253,
-      "sha256": "7dada141c1e6392cc5336018b0c99e3d7dc893865ce8b6beed8ae943f6a4e528"
-    },
-    {
-      "path": ".gitattributes",
-      "bytes": 345,
-      "sha256": "bee93880a5568fe270a8c2c1b06a5605d76d979046e8b1361ced2c7ef1e7412f"
-    },
-    {
-      "path": ".editorconfig",
-      "bytes": 186,
-      "sha256": "9ff02b5f94e6cd180b657b690fe8a76936ea9f2f376e7bb0ce327130008b5b24"
-    },
-    {
-      "path": ".nvmrc",
-      "bytes": 8,
-      "sha256": "55ce66383dffcaf804e6d3b03993b0d332cb5d7c38e26e9f92fb78ab040dc70c"
-    },
-    {
-      "path": ".env.example",
-      "bytes": 1429,
-      "sha256": "379700af52e732a10ab6a4ec3c4a18a607108e0249108e52834765713b6d255c"
-    },
-    {
-      "path": ".dockerignore",
-      "bytes": 161,
-      "sha256": "b3a47a5e95f3b05826648b09e8bb6bdee4dd1cff9082401cd1a364009ddb2c76"
-    },
-    {
-      "path": "web/access-options.js",
-      "bytes": 3257,
-      "sha256": "a336c6201ebc95a36fa45c23293775f745163d1d3330a30509bfb327e8b633a9"
-    },
-    {
-      "path": "web/app.js",
-      "bytes": 49696,
-      "sha256": "61ee5e07d4fd3febca01f59dacff5aae33aacf33daca047bc4417b3e9ec2111f"
-    },
-    {
-      "path": "web/assets/polytalk-logo.png",
-      "bytes": 1105258,
-      "sha256": "2daaef77b901fe121c7f4fc389649513fe9f0d96c5aee6275e6fd6d8e5bb5997"
-    },
-    {
-      "path": "web/auth-journey.js",
-      "bytes": 2208,
-      "sha256": "dba67cd6a703594faf52cd7698859ab5ddb680278d5ad9e39e5b3935b20c4a14"
-    },
-    {
-      "path": "web/automatic-backup.js",
-      "bytes": 7431,
-      "sha256": "9570f2a2742b3b641c0e17583858b41e72a76d6bd60659761b6f25d9cb6172cd"
-    },
-    {
-      "path": "web/backup-ui.js",
-      "bytes": 11713,
-      "sha256": "f9e96456bffedaeb1413863ff912e6c044768affcf02a1dfe205fc4764898435"
-    },
-    {
-      "path": "web/client-state.js",
-      "bytes": 1562,
-      "sha256": "ba5ceb0c1358cf0acce285983c222475c48f7bffec3b6711fc57d548b64e2650"
-    },
-    {
-      "path": "web/contact-list-ui.js",
-      "bytes": 5267,
-      "sha256": "2d8117f06d8f678ca3c209bdd21c7563179eb5e17313ba774349b5673686cc10"
-    },
-    {
-      "path": "web/contact-qr.js",
-      "bytes": 2061,
-      "sha256": "df0ea2b2304ad4ccfe4848bcb5958e3e6a5ee0496b5e2b6bbe227cd92f8f9d9d"
-    },
-    {
-      "path": "web/contact.js",
-      "bytes": 2600,
-      "sha256": "f7c49c6d906f4d4cb51cf71e4a778697d25f3c6b7135b5676bd2cabe676b6676"
-    },
-    {
-      "path": "web/conversation-creation.js",
-      "bytes": 3940,
-      "sha256": "a8399fb16c3ae4d8b254800d84ad0eb9a5655954930557ae6b3f7c3d69f555f2"
-    },
-    {
-      "path": "web/coordination-live.js",
-      "bytes": 4017,
-      "sha256": "883772a91f30db8da3bca5b2cccd44c96e773aa1b1e68127925d6df842043661"
-    },
-    {
-      "path": "web/coordination-stream.js",
-      "bytes": 5913,
-      "sha256": "8df484d8318f954e1feb8ce9df209825ab1fdff201d1f166ce937088b5b1452a"
-    },
-    {
-      "path": "web/coordination.js",
-      "bytes": 15379,
-      "sha256": "91ff0c034f87ed768415a2f1d5469ee5aacd5c4a74a7dac657a8fec88a0092d7"
-    },
-    {
-      "path": "web/human-guidance.js",
-      "bytes": 2878,
-      "sha256": "ac8963d07f55220b29914a6513da28a23a6c550e04b7ab16a303b0583575c874"
-    },
-    {
-      "path": "web/identity-client.js",
-      "bytes": 6134,
-      "sha256": "56b74befb937b12312882ef002ebe175a078cac02d05ec7ce42d2285083a7d05"
-    },
-    {
-      "path": "web/identity-recovery.js",
-      "bytes": 6794,
-      "sha256": "b9777271f0de51e4a0fa65f80be35debc2176439ea8e6f37b46e777c49c26a6c"
-    },
-    {
-      "path": "web/identity-ui.js",
-      "bytes": 9807,
-      "sha256": "ce55a0a26581fb873b4ff8f0a3217b87f5efd56294054bdfd27ec1cc5fc721e6"
-    },
-    {
-      "path": "web/index.html",
-      "bytes": 12919,
-      "sha256": "9510ce0322a4f40c26e251c8b4139ad835b8b1b3b6c7415e4af92a9fa60ae910"
-    },
-    {
-      "path": "web/key-transfer.js",
-      "bytes": 1342,
-      "sha256": "d9b151a67a5fea514058d37a6df05c6d41e5dba78761c09c9d517d55d7643478"
-    },
-    {
-      "path": "web/local-unlock-ui.js",
-      "bytes": 3587,
-      "sha256": "d047f180d13a4e9426574be97b90389f04481ffea904f99a0cfb475d09dcef7d"
-    },
-    {
-      "path": "web/local-unlock.js",
-      "bytes": 4007,
-      "sha256": "4f496a2ef4bf4122200001988b748d1872aa1785e7e8230421c9825684884d49"
-    },
-    {
-      "path": "web/matrix-client.js",
-      "bytes": 12564,
-      "sha256": "b0a1f20e7f7f72207262717bfb0f079a30a767f9a07f3c025d82a6c8d0af942f"
-    },
-    {
-      "path": "web/message-focus.js",
-      "bytes": 1681,
-      "sha256": "554e1d934e4338e24a53012e8d8b6cf701971c399ec0618e5c484733eec0b422"
-    },
-    {
-      "path": "web/message-search-ui.js",
-      "bytes": 4829,
-      "sha256": "b68778eb761e70a4d8b8fcc022bf8d0720705f3132d1b68758ec4cb86fd7de5f"
-    },
-    {
-      "path": "web/message-search.js",
-      "bytes": 2688,
-      "sha256": "17ccc28d6a14030d5586cbeeb6e0cf6cc49cb36ab76de990f0003049fc0e913e"
-    },
-    {
-      "path": "web/notifications-ui.js",
-      "bytes": 4602,
-      "sha256": "ff35b9af040eece7d9b3566a9d175bffcb28a56c89c5a2b1dcf6a4b54aa15733"
-    },
-    {
-      "path": "web/passkey-ui.js",
-      "bytes": 4343,
-      "sha256": "88bcf0ae3e14cad1cc37a927b83a1a1f4312570a12eb2fa808265cbbc07b68bc"
-    },
-    {
-      "path": "web/passphrase-generator.js",
-      "bytes": 1597,
-      "sha256": "4309bc17f61aee62ad9c7ee6fcd04e56fce9f28f870b18d4122a68d9e5999a19"
-    },
-    {
-      "path": "web/platform.js",
-      "bytes": 1084,
-      "sha256": "b7d7e158960586b0806201c39aac29de985e10f9c20ec8bd06f07ecd759c7694"
-    },
-    {
-      "path": "web/prepared-message.js",
-      "bytes": 1309,
-      "sha256": "d388d2ab7125d0d5bca228d3b3c8756f8288315d31ce5cb266008b487b0dc05c"
-    },
-    {
-      "path": "web/private-view.js",
-      "bytes": 1995,
-      "sha256": "940f3432fd0254f9354171490ffd114eec6d6549393b5297eb50204cf65ac726"
-    },
-    {
-      "path": "web/recovery-phrase.js",
-      "bytes": 2355,
-      "sha256": "26822cb71785889311ba6c4dddfc8ddb26d4870bf61a7418ee3028221e887ca4"
-    },
-    {
-      "path": "web/security-ui.js",
-      "bytes": 7824,
-      "sha256": "1399735ad5233d09b036f2c4cb11081802e586b61788b683ffd63d02a4c79496"
-    },
-    {
-      "path": "web/session-resume.js",
-      "bytes": 4923,
-      "sha256": "35a8e34f4898e0d3a9d0a1f30ed0d3ce26810f468a17f619497b6f363a085fdf"
-    },
-    {
-      "path": "web/session-scope.js",
-      "bytes": 935,
-      "sha256": "6d451d3bff3012e9fa914056347f736fa9001c38dd02eac4afebc4fc71e466e3"
-    },
-    {
-      "path": "web/sessions-ui.js",
-      "bytes": 3245,
-      "sha256": "1395f70187a08734e55bbaa692a2e82b855fa5f53f99c0f62aa1ea03563f2851"
-    },
-    {
-      "path": "web/settings-ui.js",
-      "bytes": 9936,
-      "sha256": "d5c6312868bf4d439fc7c6bbfd8bcc83e7680bcdc503beea6a306d4a0593fd64"
-    },
-    {
-      "path": "web/style.css",
-      "bytes": 18374,
-      "sha256": "2d929df52a992ce4e0e1453b77ed57ce862670533b5e7f38fc18ebb7c2113afd"
-    },
-    {
-      "path": "web/team-transfer-ui.js",
-      "bytes": 6341,
-      "sha256": "64f1dd85b1f1a1f1ae645e2fe6fd3681c53de534052169eeb157f3299805da9c"
-    },
-    {
-      "path": "web/team-transfer.js",
-      "bytes": 3512,
-      "sha256": "ba5ec9125a1fb2d84ce914a4290874848ad3b2f51445d561a670b4770feffaeb"
-    },
-    {
-      "path": "web/ui-accessibility.js",
-      "bytes": 2053,
-      "sha256": "35da4e6191bf1d4e538e0418a07f3d228cd8402d4a81cd9fa5d69acbe8ae52f9"
-    },
-    {
-      "path": "web/ui-actions.js",
-      "bytes": 1120,
-      "sha256": "3c54d0ceb7ef734921f081dab9596e821857dd1065d24da26248906752aaea2f"
-    },
-    {
-      "path": "web/vault.js",
-      "bytes": 3185,
-      "sha256": "c93e2aeb00a9e7046d96eb74c41baeca00e5925c81e8a55d5b7ca895a3dcbe0f"
-    },
-    {
-      "path": "web/verification-state.js",
-      "bytes": 1114,
-      "sha256": "27e88ca84c6a36d4578e7e6d0f5898012ab1a67878fd7d93fde00bbd30081b6b"
-    },
-    {
-      "path": "web/wallet-provider.js",
-      "bytes": 3299,
-      "sha256": "9335c7fba8417690395b08b7024bf40d1740bd17234bd9b4db1a9841514a70b4"
-    },
-    {
-      "path": "web/wallet-ui.js",
-      "bytes": 5696,
-      "sha256": "3fc2b414cdc71ba8b2cb0c5624a200004062658bdc6ba76f8723337e1cbf2259"
-    },
-    {
-      "path": "web/walletconnect.js",
-      "bytes": 4145,
-      "sha256": "acb40f1a2a8e6d4a0262177b58297968c52c8a4f7f8244846bb8b6a76fdc6f4f"
-    },
-    {
-      "path": "server/app.mjs",
-      "bytes": 45213,
-      "sha256": "35a9d2e74f6045069cd61d57fada4cacefa23e9e32c0f6111cef9eab0367af1d"
-    },
-    {
-      "path": "server/channels.mjs",
-      "bytes": 3966,
-      "sha256": "60cd8128cbdff8e04614507f89c577bfb6e38714e3697970201aaad7be6f1ff0"
-    },
-    {
-      "path": "server/coordination.mjs",
-      "bytes": 20057,
-      "sha256": "b242f1a89fdea240821ddf13e6f8f4a8636a1c0ba8a530f1c1d5a1f3ef91fbdb"
-    },
-    {
-      "path": "server/index.mjs",
-      "bytes": 2249,
-      "sha256": "1d5864f807a1f2f9d7460a292937ccf79fdf8b169b7fc5a8e190ac0954d92857"
-    },
-    {
-      "path": "server/matrix-id.mjs",
-      "bytes": 1724,
-      "sha256": "ff4da6db1fe2b2e09dfb28be1de6ae396e2898a18f57d37fc82f81d83eec1cba"
-    },
-    {
-      "path": "server/openapi.mjs",
-      "bytes": 13799,
-      "sha256": "6bddca77faaa3770e2786d775a2ef93b28d1dcb24a2cbd4b8d52da9527c5dfe2"
-    },
-    {
-      "path": "server/passkeys.mjs",
-      "bytes": 5102,
-      "sha256": "c77ffe268d3a609b6b5cebb546289ab5eab58496bc4388b3597a7e0ea93dfbe7"
-    },
-    {
-      "path": "server/proxy.mjs",
-      "bytes": 1487,
-      "sha256": "7eea811c58a30e1c64d4a2afd1db06637a2f6265f569ceed5301919394fe3602"
-    },
-    {
-      "path": "server/security.mjs",
-      "bytes": 7349,
-      "sha256": "6313e070c0d7caaf172bdb8e7aa08d20ef853c356882d5603540175144af5962"
-    },
-    {
-      "path": "server/store.mjs",
-      "bytes": 6540,
-      "sha256": "81e092358b3d674ad8abc99252f952219f07739a50978d961bc63f0d3e754848"
-    },
-    {
-      "path": "server/tools.mjs",
-      "bytes": 3311,
-      "sha256": "1023f0e464556b5638dffc993935dc04f65afb091c28a80421a0f8f39bdb871f"
-    },
-    {
-      "path": "server/wallet.mjs",
-      "bytes": 6133,
-      "sha256": "85840378a68e5c3a6cd6845b9f002446e8f085f791dd47451c6c9f84e08a2423"
     },
     {
       "path": "agent/Cargo.lock",
@@ -487,6 +232,376 @@
       "sha256": "a7a2b0d161bae3017d314bbf5836e873ba1c7a854455de13f826cd68fc6c78a6"
     },
     {
+      "path": "deploy/Dockerfile",
+      "bytes": 923,
+      "sha256": "be1d9fb27df4b2bb2ff0a8778413722728c8f35affc320138e8c3864943d4da0"
+    },
+    {
+      "path": "deploy/compose.internet.yaml",
+      "bytes": 381,
+      "sha256": "42a163d01d4e5c117c1f8faefbb0eba7ade6f2c341fa2bd27ff47c2ffe3d7828"
+    },
+    {
+      "path": "deploy/compose.intranet.yaml",
+      "bytes": 2361,
+      "sha256": "18406ce8091a460cd7e6a52bf81ae5c4a1f7863205be6f4585febe68530c5df4"
+    },
+    {
+      "path": "deploy/compose.yaml",
+      "bytes": 1861,
+      "sha256": "6d2dc513efc98a16f66e7ea258ef97097d98f42440915c2f6e6dbb3c3a985b76"
+    },
+    {
+      "path": "deploy/synapse/polytalk_policy.py",
+      "bytes": 8568,
+      "sha256": "aaa9dd6da3696f356f2a0381f404face66ee6969e9c9e722bb7ae2aefa82db83"
+    },
+    {
+      "path": "docs/action-pins.json",
+      "bytes": 472,
+      "sha256": "2503754fd945787131fa246048b0a12848f2f274ce2d78c7d6f9557b23830058"
+    },
+    {
+      "path": "docs/api.md",
+      "bytes": 1589,
+      "sha256": "f67e9a4b857924448987908ee159ba66225959a22ceefdc7845a17a7af71173f"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 1750,
+      "sha256": "f1f813e1a7cf8bb6a295ed5e0b8f4360a2458e2b9252964b2660f94fbd3e309b"
+    },
+    {
+      "path": "docs/confidentialite.md",
+      "bytes": 984,
+      "sha256": "1c44808c7030d3b3dfcb93bb3528e6d4d7a93594b3b6b7b96bb6e1d5649dd95c"
+    },
+    {
+      "path": "docs/configuration.md",
+      "bytes": 1311,
+      "sha256": "195e1435a8fb23f5d8f60a186e6e04264e473a00551515734134e0db6b00919f"
+    },
+    {
+      "path": "docs/deploiement.md",
+      "bytes": 1756,
+      "sha256": "e5364262b0079657123234507146c0ee80f16787e52d8f0f99def979d800fd24"
+    },
+    {
+      "path": "docs/developpement.md",
+      "bytes": 1299,
+      "sha256": "647a4f0251066a57bb2a1a5692a20a1b16a0275a9c12bf6e2f7fac1ff9b29d4c"
+    },
+    {
+      "path": "docs/glossaire.md",
+      "bytes": 941,
+      "sha256": "559770fa8735efa4e05182bffa5f898306e8aec82ab74167135ba53cd3c64464"
+    },
+    {
+      "path": "docs/installation.md",
+      "bytes": 1779,
+      "sha256": "cad1cb9462ad2392020ec12cf6be202ffb7be811cf43635e49be77d3f1386eae"
+    },
+    {
+      "path": "docs/licences-npm.json",
+      "bytes": 36456,
+      "sha256": "b12ab39d1e478fd78de3cee20b6a85da4ff0997c7ea154630571474cbec22807"
+    },
+    {
+      "path": "docs/passation/README.md",
+      "bytes": 1953,
+      "sha256": "ca4a82767b565edcf8b132bed01e62871fa979d7d13e91de58cf37bde05d18dd"
+    },
+    {
+      "path": "docs/passation/etat-et-reste-a-faire.md",
+      "bytes": 4111,
+      "sha256": "35c926248921ecaf304aee34c99fe8caaaa479c4a609bb5006e6ef71e0c835cd"
+    },
+    {
+      "path": "docs/passation/index.html",
+      "bytes": 1453,
+      "sha256": "8fd3297ae6636e2fe74cc067feb50fe01aeb11196ef939fb8c1a1de057a26752"
+    },
+    {
+      "path": "docs/passation/maintenance.md",
+      "bytes": 4524,
+      "sha256": "4d3a6e16fc6a6810dae8f3ad8275bcdc386ebc4d27b97cba13d56a769e8751eb"
+    },
+    {
+      "path": "docs/passation/preuves-et-confidentialite.md",
+      "bytes": 2756,
+      "sha256": "060371f04eca017b92c4064f42e471dd6287f07fd9a6c287c0097f95bf49937d"
+    },
+    {
+      "path": "docs/passation/prise-en-main.md",
+      "bytes": 3245,
+      "sha256": "cc152d5839e05dcbb16100a15e8128ea886423394d9054f5d39f9b747713ffc2"
+    },
+    {
+      "path": "docs/publication-github.md",
+      "bytes": 5546,
+      "sha256": "844d909cb25670c4a24d6b1e7c7790591f9ef5c8394655f710f07a660c41bd70"
+    },
+    {
+      "path": "docs/reproduction.md",
+      "bytes": 2280,
+      "sha256": "c5de46b9ada65412feea126bab7b0099c79c45b09e40d62f0662db5c89e34adc"
+    },
+    {
+      "path": "docs/roadmap.md",
+      "bytes": 919,
+      "sha256": "5ccba34c7db347539f8130109b51d8567b4475a7b6281a4a012ddfece6c81f6c"
+    },
+    {
+      "path": "docs/tests.md",
+      "bytes": 2125,
+      "sha256": "cb346095770f362c5a96317341f63251b900a7b644182363bd802bfd8c700164"
+    },
+    {
+      "path": "docs/utilisation.md",
+      "bytes": 1359,
+      "sha256": "337043b6060c0cf51c098643a00c29772d530aab9f0e7a8faed66002df515a2f"
+    },
+    {
+      "path": "documentation/00-pilotage/TODO.md",
+      "bytes": 19708,
+      "sha256": "a9be4803a918dbdf185bf6b4f843dd171ef029dfaa1026c7b38583bcf5d06428"
+    },
+    {
+      "path": "documentation/00-pilotage/actualiser_architecture.py",
+      "bytes": 41054,
+      "sha256": "d90e301aa64dbe83e6a78d533380e7c303ad6325f8773e3a52b1c43f8751f484"
+    },
+    {
+      "path": "documentation/00-pilotage/cahier-des-charges-final.html",
+      "bytes": 7588,
+      "sha256": "a197cd1eae620a3ac52590e1f83abde617cbb01084646a041892e9581e7e4b17"
+    },
+    {
+      "path": "documentation/00-pilotage/definir_identite_partage.py",
+      "bytes": 14334,
+      "sha256": "b4f1e008a818625aa845f6e34f252bb2a3a928618ab5471168fea0ca7332b136"
+    },
+    {
+      "path": "documentation/00-pilotage/evaluer_socle_messagerie.py",
+      "bytes": 30971,
+      "sha256": "ee22a4ba9deec8dd003c1f41232a174517a8dbc7530a993d6c9ce309fd3ff530"
+    },
+    {
+      "path": "documentation/00-pilotage/index.html",
+      "bytes": 15585,
+      "sha256": "d15e364599a8529b8dd399180c690038039663c46a724499b023478b4c6629ab"
+    },
+    {
+      "path": "documentation/00-pilotage/matrice-exigences-preuves.html",
+      "bytes": 13564,
+      "sha256": "fa6aaf0e90c99501a936c5e632d2e0157bf3c44c6d54b82d500d4f9d0061de72"
+    },
+    {
+      "path": "documentation/00-pilotage/verification-documentaire.html",
+      "bytes": 10686,
+      "sha256": "ef47457f4a43aef1db4ece1f53bcdfe00a4e98a08943fd3b01963607935dfc0b"
+    },
+    {
+      "path": "documentation/01-cadrage/vision.html",
+      "bytes": 13371,
+      "sha256": "0d8a0041c540f62fbe2cb6bcdd23b50ff603e7f601d625cc8a378d0ee0af5a93"
+    },
+    {
+      "path": "documentation/02-architecture/decisions.html",
+      "bytes": 15548,
+      "sha256": "bff6592b924a346d43a80fe5d1c2998f975de7791617ba5d506ef5ebc55ddb6b"
+    },
+    {
+      "path": "documentation/02-architecture/identite-et-partage.html",
+      "bytes": 18827,
+      "sha256": "c6cb9f3d4f109fe669763d86ff84f48fe8eacb57066aa2f027f454704c725bda"
+    },
+    {
+      "path": "documentation/02-architecture/reception-notifications-deploiement.html",
+      "bytes": 21802,
+      "sha256": "400de0e5baf30e1764790301f129727ab9072f432934082dfdf98cf18cd1b290"
+    },
+    {
+      "path": "documentation/02-architecture/transport-a2a-slim-mls.html",
+      "bytes": 30404,
+      "sha256": "f41f40979db1c7803df79e0510a5f98911c62512f8d0803024e3b89d0793b767"
+    },
+    {
+      "path": "documentation/03-recherche/comparatif-socles-messagerie.html",
+      "bytes": 22618,
+      "sha256": "5873250368feb9dc7bf9eacfe621b6fbbd315c7f8f9ad88863c169e23b2586bb"
+    },
+    {
+      "path": "documentation/03-recherche/protocoles-connecteurs.html",
+      "bytes": 9894,
+      "sha256": "43e37c9c477a7d2a5d15146cf41290c7db5ae06447228b75f2a93da2f062d7b7"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-16-application-design.html",
+      "bytes": 11958,
+      "sha256": "65edb6bf184e8a0ee017c090fb3f7b30188ae549e30bcaa3ea70b52494fb6428"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-16-application-plan.html",
+      "bytes": 14301,
+      "sha256": "9f744e21e4aba8d5b28cbd6ebeac04f24430fe3b791481176c5965009398389a"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-17-connecteur-agents.html",
+      "bytes": 11310,
+      "sha256": "fa9c81680203dfb3aa8d21c69d9a0c3beea89049cfba7a95e5ef471af8931ead"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-17-identite-visuelle-et-sessions.html",
+      "bytes": 3422,
+      "sha256": "472efea0e355dad000a7824aaad1160dd233d42fb1711c89e486990964892cce"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-17-partage-identifiants.html",
+      "bytes": 5080,
+      "sha256": "6436d47c39f012dffc0a7814b275ddf80c9bd800a637b0267a61da5facee5cb2"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-17-plateforme-coordination.html",
+      "bytes": 17500,
+      "sha256": "01ad4144ed77804f3ed41ed2b7d88698a2bf5b835f2d9152fcbcac69a741ada5"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-17-relais-a2a.html",
+      "bytes": 5824,
+      "sha256": "c65b19bc30a3549085ae2a4443392737e6b675a7468911e154fd1dcf163826db"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-18-acces-guide-wallets.html",
+      "bytes": 14893,
+      "sha256": "89f48ffd2d1ec0779e5f2f07b6ddfc87d08fe6111cb29205f054ddb085807a68"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-18-authentification-optionnelle.html",
+      "bytes": 13568,
+      "sha256": "920fcd629bb8ca223e9f4f04c5fb2350646379fcc679e2d127b4ca4221081b2a"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-18-canaux-et-outils-agents.html",
+      "bytes": 9433,
+      "sha256": "de4faac04bf47571264e7456fe27d16b3edef3d4a59c94c07b6d831a3dfc8f4a"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-18-connexion-simple-et-restauration.html",
+      "bytes": 7365,
+      "sha256": "1584e4d00b6d725c04851e38bd6139d39b12a15daa4ad6a612c85cd6a5460a14"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-18-delegation-approbations-multiappareil.html",
+      "bytes": 16219,
+      "sha256": "906ff33915f2d4ddc9578c472a262919a3b0585ce40c6065fdce8f1665f33ecd"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-18-distribution-internet-intranet.html",
+      "bytes": 8166,
+      "sha256": "25462e926b2d31b8dfd12f39fc2ce76a74b25a1b893f7c160411f8653fab547f"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-18-parcours-identite-recuperation.html",
+      "bytes": 11425,
+      "sha256": "be5e4adfc8f1217bd6fde21e0c77cb389d1743f699e20667da546f232439d604"
+    },
+    {
+      "path": "documentation/04-livrables/2026-10-18-revue-globale-et-qualification.html",
+      "bytes": 7016,
+      "sha256": "ffed3c9050c109fe1194b852155cf1f8a339ca00cc7db364f006abb8bc9d0024"
+    },
+    {
+      "path": "documentation/04-livrables/api-reference.html",
+      "bytes": 13073,
+      "sha256": "7979079480ff820fa170350799ce70f2be78d3143278fe4b9825beb0190d8f4c"
+    },
+    {
+      "path": "documentation/04-livrables/contrats-api-mcp-a2a.html",
+      "bytes": 5706,
+      "sha256": "f1b1214e0e418c9979a0dc14629fd8578bf0c83a3887f1a681f9cb3f60033048"
+    },
+    {
+      "path": "documentation/04-livrables/feuille-de-route-integration.html",
+      "bytes": 13040,
+      "sha256": "286b1760776dfacf86ed73558c51e49faf9504f98ae9ebb49cda0ad8d21ceafe"
+    },
+    {
+      "path": "documentation/04-livrables/guide-administration.html",
+      "bytes": 6231,
+      "sha256": "259729502be754ca80bbd31f7767ee500ac87a18dfd23bbc2ddd9686eeea8849"
+    },
+    {
+      "path": "documentation/04-livrables/guide-utilisateur.html",
+      "bytes": 12772,
+      "sha256": "12d9d11bc103ad596db5f2bdd112b84fc24132d7bba00eb8effb884ab142f800"
+    },
+    {
+      "path": "documentation/04-livrables/identite-locale.html",
+      "bytes": 4894,
+      "sha256": "90663b51bd80d6dde5618f61f7af2c68ea78bc45ae38639723de65d7b305ed05"
+    },
+    {
+      "path": "documentation/04-livrables/rapport-recette.html",
+      "bytes": 9512,
+      "sha256": "eec74e12d0610d4627261b10a2ad2573e1a71fe4d92ca390b3703ffdd07ef36a"
+    },
+    {
+      "path": "documentation/04-livrables/refonte-interface-humaine.html",
+      "bytes": 6013,
+      "sha256": "9b1189568e71afe284f188b8915dd77e9cb1f95c5740aac7102c88ae477b301e"
+    },
+    {
+      "path": "documentation/06-conception-ux/01-analyse-utilisateurs.html",
+      "bytes": 12380,
+      "sha256": "f5841217d8dcc06bded60e4f04cb9d9858be0d307cea51ea20ae82972636a27f"
+    },
+    {
+      "path": "documentation/06-conception-ux/02-architecture-parcours.html",
+      "bytes": 109099,
+      "sha256": "2693bfca0663acaff24217cf61b46b361f12d6e98935f5aaf5aec09d8563543c"
+    },
+    {
+      "path": "documentation/06-conception-ux/03-design-system.html",
+      "bytes": 24952,
+      "sha256": "83819bcd977689cabf3ea3caf37f19786edc0b9b13898aeeedada083d2337d8c"
+    },
+    {
+      "path": "documentation/06-conception-ux/inventaire-ecrans.json",
+      "bytes": 68412,
+      "sha256": "dac9276656d734cf4764c9928e33411c638fcbe7c3ab5b1f0fd45a0855f8c02f"
+    },
+    {
+      "path": "documentation/06-conception-ux/maintenance-interface.html",
+      "bytes": 7567,
+      "sha256": "3ea13cd8d787acbdbd21945b78daa731129f78345ad39f855c8fc1fea04179e4"
+    },
+    {
+      "path": "examples/README.md",
+      "bytes": 449,
+      "sha256": "f77bc10bbfc0b292301b7f930dcb8a1ec0c7390a48dec52e3a4a098e01318467"
+    },
+    {
+      "path": "examples/contact.json",
+      "bytes": 104,
+      "sha256": "48ac129c32ee579b43a95856f306b6801f2a21c39a16e869288f297f5e6f3af1"
+    },
+    {
+      "path": "examples/message.json",
+      "bytes": 105,
+      "sha256": "d5faf5005f716686e084f88d6e3292c9de3f1e3891bac7ecee7a695ccf48583e"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 134780,
+      "sha256": "9dfb37b2460ed343f85d5ff37a43739d94a4bb82ce0af747eab8107de3b7b157"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2915,
+      "sha256": "2bcf0aeaf067618770ce641d2eb9e7112f17418c8e55c18e2bc669307958789d"
+    },
+    {
       "path": "scripts/agent-corpus.mjs",
       "bytes": 2331,
       "sha256": "ef49c0c26819f964cfd7945b1c64e256e086e8d98ffc3092358bd5b85bebc2b7"
@@ -540,6 +655,66 @@
       "path": "scripts/verify-release.mjs",
       "bytes": 3214,
       "sha256": "11b78b070caae13196fb5bd70c75584a9f0265dce40d9755675b53936c6df101"
+    },
+    {
+      "path": "server/app.mjs",
+      "bytes": 45213,
+      "sha256": "35a9d2e74f6045069cd61d57fada4cacefa23e9e32c0f6111cef9eab0367af1d"
+    },
+    {
+      "path": "server/channels.mjs",
+      "bytes": 3966,
+      "sha256": "60cd8128cbdff8e04614507f89c577bfb6e38714e3697970201aaad7be6f1ff0"
+    },
+    {
+      "path": "server/coordination.mjs",
+      "bytes": 20057,
+      "sha256": "b242f1a89fdea240821ddf13e6f8f4a8636a1c0ba8a530f1c1d5a1f3ef91fbdb"
+    },
+    {
+      "path": "server/index.mjs",
+      "bytes": 2249,
+      "sha256": "1d5864f807a1f2f9d7460a292937ccf79fdf8b169b7fc5a8e190ac0954d92857"
+    },
+    {
+      "path": "server/matrix-id.mjs",
+      "bytes": 1724,
+      "sha256": "ff4da6db1fe2b2e09dfb28be1de6ae396e2898a18f57d37fc82f81d83eec1cba"
+    },
+    {
+      "path": "server/openapi.mjs",
+      "bytes": 13799,
+      "sha256": "6bddca77faaa3770e2786d775a2ef93b28d1dcb24a2cbd4b8d52da9527c5dfe2"
+    },
+    {
+      "path": "server/passkeys.mjs",
+      "bytes": 5102,
+      "sha256": "c77ffe268d3a609b6b5cebb546289ab5eab58496bc4388b3597a7e0ea93dfbe7"
+    },
+    {
+      "path": "server/proxy.mjs",
+      "bytes": 1487,
+      "sha256": "7eea811c58a30e1c64d4a2afd1db06637a2f6265f569ceed5301919394fe3602"
+    },
+    {
+      "path": "server/security.mjs",
+      "bytes": 7349,
+      "sha256": "6313e070c0d7caaf172bdb8e7aa08d20ef853c356882d5603540175144af5962"
+    },
+    {
+      "path": "server/store.mjs",
+      "bytes": 6540,
+      "sha256": "81e092358b3d674ad8abc99252f952219f07739a50978d961bc63f0d3e754848"
+    },
+    {
+      "path": "server/tools.mjs",
+      "bytes": 3311,
+      "sha256": "1023f0e464556b5638dffc993935dc04f65afb091c28a80421a0f8f39bdb871f"
+    },
+    {
+      "path": "server/wallet.mjs",
+      "bytes": 6133,
+      "sha256": "85840378a68e5c3a6cd6845b9f002446e8f085f791dd47451c6c9f84e08a2423"
     },
     {
       "path": "tests/a2a.test.mjs",
@@ -952,389 +1127,244 @@
       "sha256": "5eff7d13d8e4410b9995e70f216439c8406206824d5da0da12c026bef1718ef6"
     },
     {
-      "path": "deploy/Dockerfile",
-      "bytes": 923,
-      "sha256": "be1d9fb27df4b2bb2ff0a8778413722728c8f35affc320138e8c3864943d4da0"
+      "path": "web/access-options.js",
+      "bytes": 3257,
+      "sha256": "a336c6201ebc95a36fa45c23293775f745163d1d3330a30509bfb327e8b633a9"
     },
     {
-      "path": "deploy/compose.internet.yaml",
-      "bytes": 381,
-      "sha256": "42a163d01d4e5c117c1f8faefbb0eba7ade6f2c341fa2bd27ff47c2ffe3d7828"
+      "path": "web/app.js",
+      "bytes": 49696,
+      "sha256": "61ee5e07d4fd3febca01f59dacff5aae33aacf33daca047bc4417b3e9ec2111f"
     },
     {
-      "path": "deploy/compose.intranet.yaml",
-      "bytes": 2361,
-      "sha256": "18406ce8091a460cd7e6a52bf81ae5c4a1f7863205be6f4585febe68530c5df4"
+      "path": "web/assets/polytalk-logo.png",
+      "bytes": 1105258,
+      "sha256": "2daaef77b901fe121c7f4fc389649513fe9f0d96c5aee6275e6fd6d8e5bb5997"
     },
     {
-      "path": "deploy/compose.yaml",
-      "bytes": 1861,
-      "sha256": "6d2dc513efc98a16f66e7ea258ef97097d98f42440915c2f6e6dbb3c3a985b76"
+      "path": "web/auth-journey.js",
+      "bytes": 2208,
+      "sha256": "dba67cd6a703594faf52cd7698859ab5ddb680278d5ad9e39e5b3935b20c4a14"
     },
     {
-      "path": "deploy/synapse/polytalk_policy.py",
-      "bytes": 8568,
-      "sha256": "aaa9dd6da3696f356f2a0381f404face66ee6969e9c9e722bb7ae2aefa82db83"
+      "path": "web/automatic-backup.js",
+      "bytes": 7431,
+      "sha256": "9570f2a2742b3b641c0e17583858b41e72a76d6bd60659761b6f25d9cb6172cd"
     },
     {
-      "path": "docs/action-pins.json",
-      "bytes": 472,
-      "sha256": "2503754fd945787131fa246048b0a12848f2f274ce2d78c7d6f9557b23830058"
+      "path": "web/backup-ui.js",
+      "bytes": 11713,
+      "sha256": "f9e96456bffedaeb1413863ff912e6c044768affcf02a1dfe205fc4764898435"
     },
     {
-      "path": "docs/api.md",
-      "bytes": 1589,
-      "sha256": "f67e9a4b857924448987908ee159ba66225959a22ceefdc7845a17a7af71173f"
+      "path": "web/client-state.js",
+      "bytes": 1562,
+      "sha256": "ba5ceb0c1358cf0acce285983c222475c48f7bffec3b6711fc57d548b64e2650"
     },
     {
-      "path": "docs/architecture.md",
-      "bytes": 1750,
-      "sha256": "f1f813e1a7cf8bb6a295ed5e0b8f4360a2458e2b9252964b2660f94fbd3e309b"
+      "path": "web/contact-list-ui.js",
+      "bytes": 5267,
+      "sha256": "2d8117f06d8f678ca3c209bdd21c7563179eb5e17313ba774349b5673686cc10"
     },
     {
-      "path": "docs/confidentialite.md",
-      "bytes": 984,
-      "sha256": "1c44808c7030d3b3dfcb93bb3528e6d4d7a93594b3b6b7b96bb6e1d5649dd95c"
+      "path": "web/contact-qr.js",
+      "bytes": 2061,
+      "sha256": "df0ea2b2304ad4ccfe4848bcb5958e3e6a5ee0496b5e2b6bbe227cd92f8f9d9d"
     },
     {
-      "path": "docs/configuration.md",
-      "bytes": 1311,
-      "sha256": "195e1435a8fb23f5d8f60a186e6e04264e473a00551515734134e0db6b00919f"
+      "path": "web/contact.js",
+      "bytes": 2600,
+      "sha256": "f7c49c6d906f4d4cb51cf71e4a778697d25f3c6b7135b5676bd2cabe676b6676"
     },
     {
-      "path": "docs/deploiement.md",
-      "bytes": 1756,
-      "sha256": "e5364262b0079657123234507146c0ee80f16787e52d8f0f99def979d800fd24"
+      "path": "web/conversation-creation.js",
+      "bytes": 3940,
+      "sha256": "a8399fb16c3ae4d8b254800d84ad0eb9a5655954930557ae6b3f7c3d69f555f2"
     },
     {
-      "path": "docs/developpement.md",
-      "bytes": 1299,
-      "sha256": "647a4f0251066a57bb2a1a5692a20a1b16a0275a9c12bf6e2f7fac1ff9b29d4c"
+      "path": "web/coordination-live.js",
+      "bytes": 4017,
+      "sha256": "883772a91f30db8da3bca5b2cccd44c96e773aa1b1e68127925d6df842043661"
     },
     {
-      "path": "docs/glossaire.md",
-      "bytes": 941,
-      "sha256": "559770fa8735efa4e05182bffa5f898306e8aec82ab74167135ba53cd3c64464"
+      "path": "web/coordination-stream.js",
+      "bytes": 5913,
+      "sha256": "8df484d8318f954e1feb8ce9df209825ab1fdff201d1f166ce937088b5b1452a"
     },
     {
-      "path": "docs/installation.md",
-      "bytes": 1779,
-      "sha256": "cad1cb9462ad2392020ec12cf6be202ffb7be811cf43635e49be77d3f1386eae"
+      "path": "web/coordination.js",
+      "bytes": 15379,
+      "sha256": "91ff0c034f87ed768415a2f1d5469ee5aacd5c4a74a7dac657a8fec88a0092d7"
     },
     {
-      "path": "docs/licences-npm.json",
-      "bytes": 36456,
-      "sha256": "b12ab39d1e478fd78de3cee20b6a85da4ff0997c7ea154630571474cbec22807"
+      "path": "web/human-guidance.js",
+      "bytes": 2878,
+      "sha256": "ac8963d07f55220b29914a6513da28a23a6c550e04b7ab16a303b0583575c874"
     },
     {
-      "path": "docs/publication-github.md",
-      "bytes": 5546,
-      "sha256": "844d909cb25670c4a24d6b1e7c7790591f9ef5c8394655f710f07a660c41bd70"
+      "path": "web/identity-client.js",
+      "bytes": 6134,
+      "sha256": "56b74befb937b12312882ef002ebe175a078cac02d05ec7ce42d2285083a7d05"
     },
     {
-      "path": "docs/reproduction.md",
-      "bytes": 2280,
-      "sha256": "c5de46b9ada65412feea126bab7b0099c79c45b09e40d62f0662db5c89e34adc"
+      "path": "web/identity-recovery.js",
+      "bytes": 6794,
+      "sha256": "b9777271f0de51e4a0fa65f80be35debc2176439ea8e6f37b46e777c49c26a6c"
     },
     {
-      "path": "docs/roadmap.md",
-      "bytes": 919,
-      "sha256": "5ccba34c7db347539f8130109b51d8567b4475a7b6281a4a012ddfece6c81f6c"
+      "path": "web/identity-ui.js",
+      "bytes": 9807,
+      "sha256": "ce55a0a26581fb873b4ff8f0a3217b87f5efd56294054bdfd27ec1cc5fc721e6"
     },
     {
-      "path": "docs/tests.md",
-      "bytes": 2125,
-      "sha256": "cb346095770f362c5a96317341f63251b900a7b644182363bd802bfd8c700164"
+      "path": "web/index.html",
+      "bytes": 12919,
+      "sha256": "9510ce0322a4f40c26e251c8b4139ad835b8b1b3b6c7415e4af92a9fa60ae910"
     },
     {
-      "path": "docs/utilisation.md",
-      "bytes": 1359,
-      "sha256": "337043b6060c0cf51c098643a00c29772d530aab9f0e7a8faed66002df515a2f"
+      "path": "web/key-transfer.js",
+      "bytes": 1342,
+      "sha256": "d9b151a67a5fea514058d37a6df05c6d41e5dba78761c09c9d517d55d7643478"
     },
     {
-      "path": "examples/README.md",
-      "bytes": 449,
-      "sha256": "f77bc10bbfc0b292301b7f930dcb8a1ec0c7390a48dec52e3a4a098e01318467"
+      "path": "web/local-unlock-ui.js",
+      "bytes": 3587,
+      "sha256": "d047f180d13a4e9426574be97b90389f04481ffea904f99a0cfb475d09dcef7d"
     },
     {
-      "path": "examples/contact.json",
-      "bytes": 104,
-      "sha256": "48ac129c32ee579b43a95856f306b6801f2a21c39a16e869288f297f5e6f3af1"
+      "path": "web/local-unlock.js",
+      "bytes": 4007,
+      "sha256": "4f496a2ef4bf4122200001988b748d1872aa1785e7e8230421c9825684884d49"
     },
     {
-      "path": "examples/message.json",
-      "bytes": 105,
-      "sha256": "d5faf5005f716686e084f88d6e3292c9de3f1e3891bac7ecee7a695ccf48583e"
+      "path": "web/matrix-client.js",
+      "bytes": 12564,
+      "sha256": "b0a1f20e7f7f72207262717bfb0f079a30a767f9a07f3c025d82a6c8d0af942f"
     },
     {
-      "path": ".github/CODEOWNERS",
-      "bytes": 121,
-      "sha256": "553c2540fb45033ea399003ad7f255c315431b693f4dcf74b404f705b58f0231"
+      "path": "web/message-focus.js",
+      "bytes": 1681,
+      "sha256": "554e1d934e4338e24a53012e8d8b6cf701971c399ec0618e5c484733eec0b422"
     },
     {
-      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
-      "bytes": 1068,
-      "sha256": "600b14205cce0fa7af77d2c7a7aeb0d11ce094f4fa22411646a1d0453d4a45a4"
+      "path": "web/message-search-ui.js",
+      "bytes": 4829,
+      "sha256": "b68778eb761e70a4d8b8fcc022bf8d0720705f3132d1b68758ec4cb86fd7de5f"
     },
     {
-      "path": ".github/ISSUE_TEMPLATE/config.yml",
-      "bytes": 72,
-      "sha256": "4c0dc940346c1fca72894ae15a744d60a5510178a0c92abb1008c8b83628b7b5"
+      "path": "web/message-search.js",
+      "bytes": 2688,
+      "sha256": "17ccc28d6a14030d5586cbeeb6e0cf6cc49cb36ab76de990f0003049fc0e913e"
     },
     {
-      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
-      "bytes": 544,
-      "sha256": "71e0e113879cec815bf1340a85860cdd9a14ea343856e61556d79a24bbf658ff"
+      "path": "web/notifications-ui.js",
+      "bytes": 4602,
+      "sha256": "ff35b9af040eece7d9b3566a9d175bffcb28a56c89c5a2b1dcf6a4b54aa15733"
     },
     {
-      "path": ".github/ISSUE_TEMPLATE/question.yml",
-      "bytes": 380,
-      "sha256": "8f863070103d7419bd401d09f39db7dc2037fc20fae3f46aa9c97f6a5661873b"
+      "path": "web/passkey-ui.js",
+      "bytes": 4343,
+      "sha256": "88bcf0ae3e14cad1cc37a927b83a1a1f4312570a12eb2fa808265cbbc07b68bc"
     },
     {
-      "path": ".github/PULL_REQUEST_TEMPLATE.md",
-      "bytes": 580,
-      "sha256": "ab671692aee1eba9caa0f6f3a101eb7978b6182dc986e5c1e91b4f663abee0e7"
+      "path": "web/passphrase-generator.js",
+      "bytes": 1597,
+      "sha256": "4309bc17f61aee62ad9c7ee6fcd04e56fce9f28f870b18d4122a68d9e5999a19"
     },
     {
-      "path": ".github/dependabot.yml",
-      "bytes": 543,
-      "sha256": "59eb15e09609ff9546e5e80d9de410eccb8fe3b75d67d8dee9cef85381f16010"
+      "path": "web/platform.js",
+      "bytes": 1084,
+      "sha256": "b7d7e158960586b0806201c39aac29de985e10f9c20ec8bd06f07ecd759c7694"
     },
     {
-      "path": ".github/labels.yml",
-      "bytes": 497,
-      "sha256": "eb5366608cc50d2b50a88f983cead7701b093e42fe1e9b725039b40ae4a95a4a"
+      "path": "web/prepared-message.js",
+      "bytes": 1309,
+      "sha256": "d388d2ab7125d0d5bca228d3b3c8756f8288315d31ce5cb266008b487b0dc05c"
     },
     {
-      "path": ".github/workflows/ci.yml",
-      "bytes": 1045,
-      "sha256": "76b8c1664ea1bfd572f19ce37aa7d59ae20c2bd7ddd2444451b2c22efcfc5b93"
+      "path": "web/private-view.js",
+      "bytes": 1995,
+      "sha256": "940f3432fd0254f9354171490ffd114eec6d6549393b5297eb50204cf65ac726"
     },
     {
-      "path": ".github/workflows/codeql.yml",
-      "bytes": 619,
-      "sha256": "f3c72aca1c5a425f2b3516cf87f111bfe7a9d7535b206c2c7866fbdc3941cd6d"
+      "path": "web/recovery-phrase.js",
+      "bytes": 2355,
+      "sha256": "26822cb71785889311ba6c4dddfc8ddb26d4870bf61a7418ee3028221e887ca4"
     },
     {
-      "path": ".github/workflows/release.yml",
-      "bytes": 1138,
-      "sha256": "025059456f617da16c348e350d1bf622f7e1ab59a6a8a9494629da55cbda416c"
+      "path": "web/security-ui.js",
+      "bytes": 7824,
+      "sha256": "1399735ad5233d09b036f2c4cb11081802e586b61788b683ffd63d02a4c79496"
     },
     {
-      "path": "documentation/00-pilotage/TODO.md",
-      "bytes": 19708,
-      "sha256": "a9be4803a918dbdf185bf6b4f843dd171ef029dfaa1026c7b38583bcf5d06428"
+      "path": "web/session-resume.js",
+      "bytes": 4923,
+      "sha256": "35a8e34f4898e0d3a9d0a1f30ed0d3ce26810f468a17f619497b6f363a085fdf"
     },
     {
-      "path": "documentation/00-pilotage/actualiser_architecture.py",
-      "bytes": 41054,
-      "sha256": "d90e301aa64dbe83e6a78d533380e7c303ad6325f8773e3a52b1c43f8751f484"
+      "path": "web/session-scope.js",
+      "bytes": 935,
+      "sha256": "6d451d3bff3012e9fa914056347f736fa9001c38dd02eac4afebc4fc71e466e3"
     },
     {
-      "path": "documentation/00-pilotage/cahier-des-charges-final.html",
-      "bytes": 7588,
-      "sha256": "a197cd1eae620a3ac52590e1f83abde617cbb01084646a041892e9581e7e4b17"
+      "path": "web/sessions-ui.js",
+      "bytes": 3245,
+      "sha256": "1395f70187a08734e55bbaa692a2e82b855fa5f53f99c0f62aa1ea03563f2851"
     },
     {
-      "path": "documentation/00-pilotage/definir_identite_partage.py",
-      "bytes": 14334,
-      "sha256": "b4f1e008a818625aa845f6e34f252bb2a3a928618ab5471168fea0ca7332b136"
+      "path": "web/settings-ui.js",
+      "bytes": 9936,
+      "sha256": "d5c6312868bf4d439fc7c6bbfd8bcc83e7680bcdc503beea6a306d4a0593fd64"
     },
     {
-      "path": "documentation/00-pilotage/evaluer_socle_messagerie.py",
-      "bytes": 30971,
-      "sha256": "ee22a4ba9deec8dd003c1f41232a174517a8dbc7530a993d6c9ce309fd3ff530"
+      "path": "web/style.css",
+      "bytes": 18374,
+      "sha256": "2d929df52a992ce4e0e1453b77ed57ce862670533b5e7f38fc18ebb7c2113afd"
     },
     {
-      "path": "documentation/00-pilotage/index.html",
-      "bytes": 15585,
-      "sha256": "d15e364599a8529b8dd399180c690038039663c46a724499b023478b4c6629ab"
+      "path": "web/team-transfer-ui.js",
+      "bytes": 6341,
+      "sha256": "64f1dd85b1f1a1f1ae645e2fe6fd3681c53de534052169eeb157f3299805da9c"
     },
     {
-      "path": "documentation/00-pilotage/matrice-exigences-preuves.html",
-      "bytes": 13564,
-      "sha256": "fa6aaf0e90c99501a936c5e632d2e0157bf3c44c6d54b82d500d4f9d0061de72"
+      "path": "web/team-transfer.js",
+      "bytes": 3512,
+      "sha256": "ba5ec9125a1fb2d84ce914a4290874848ad3b2f51445d561a670b4770feffaeb"
     },
     {
-      "path": "documentation/00-pilotage/verification-documentaire.html",
-      "bytes": 10686,
-      "sha256": "ef47457f4a43aef1db4ece1f53bcdfe00a4e98a08943fd3b01963607935dfc0b"
+      "path": "web/ui-accessibility.js",
+      "bytes": 2053,
+      "sha256": "35da4e6191bf1d4e538e0418a07f3d228cd8402d4a81cd9fa5d69acbe8ae52f9"
     },
     {
-      "path": "documentation/01-cadrage/vision.html",
-      "bytes": 13371,
-      "sha256": "0d8a0041c540f62fbe2cb6bcdd23b50ff603e7f601d625cc8a378d0ee0af5a93"
+      "path": "web/ui-actions.js",
+      "bytes": 1120,
+      "sha256": "3c54d0ceb7ef734921f081dab9596e821857dd1065d24da26248906752aaea2f"
     },
     {
-      "path": "documentation/02-architecture/decisions.html",
-      "bytes": 15548,
-      "sha256": "bff6592b924a346d43a80fe5d1c2998f975de7791617ba5d506ef5ebc55ddb6b"
+      "path": "web/vault.js",
+      "bytes": 3185,
+      "sha256": "c93e2aeb00a9e7046d96eb74c41baeca00e5925c81e8a55d5b7ca895a3dcbe0f"
     },
     {
-      "path": "documentation/02-architecture/identite-et-partage.html",
-      "bytes": 18827,
-      "sha256": "c6cb9f3d4f109fe669763d86ff84f48fe8eacb57066aa2f027f454704c725bda"
+      "path": "web/verification-state.js",
+      "bytes": 1114,
+      "sha256": "27e88ca84c6a36d4578e7e6d0f5898012ab1a67878fd7d93fde00bbd30081b6b"
     },
     {
-      "path": "documentation/02-architecture/reception-notifications-deploiement.html",
-      "bytes": 21802,
-      "sha256": "400de0e5baf30e1764790301f129727ab9072f432934082dfdf98cf18cd1b290"
+      "path": "web/wallet-provider.js",
+      "bytes": 3299,
+      "sha256": "9335c7fba8417690395b08b7024bf40d1740bd17234bd9b4db1a9841514a70b4"
     },
     {
-      "path": "documentation/02-architecture/transport-a2a-slim-mls.html",
-      "bytes": 30404,
-      "sha256": "f41f40979db1c7803df79e0510a5f98911c62512f8d0803024e3b89d0793b767"
+      "path": "web/wallet-ui.js",
+      "bytes": 5696,
+      "sha256": "3fc2b414cdc71ba8b2cb0c5624a200004062658bdc6ba76f8723337e1cbf2259"
     },
     {
-      "path": "documentation/03-recherche/comparatif-socles-messagerie.html",
-      "bytes": 22618,
-      "sha256": "5873250368feb9dc7bf9eacfe621b6fbbd315c7f8f9ad88863c169e23b2586bb"
-    },
-    {
-      "path": "documentation/03-recherche/protocoles-connecteurs.html",
-      "bytes": 9894,
-      "sha256": "43e37c9c477a7d2a5d15146cf41290c7db5ae06447228b75f2a93da2f062d7b7"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-16-application-design.html",
-      "bytes": 11958,
-      "sha256": "65edb6bf184e8a0ee017c090fb3f7b30188ae549e30bcaa3ea70b52494fb6428"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-16-application-plan.html",
-      "bytes": 14301,
-      "sha256": "9f744e21e4aba8d5b28cbd6ebeac04f24430fe3b791481176c5965009398389a"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-17-connecteur-agents.html",
-      "bytes": 11310,
-      "sha256": "fa9c81680203dfb3aa8d21c69d9a0c3beea89049cfba7a95e5ef471af8931ead"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-17-identite-visuelle-et-sessions.html",
-      "bytes": 3422,
-      "sha256": "472efea0e355dad000a7824aaad1160dd233d42fb1711c89e486990964892cce"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-17-partage-identifiants.html",
-      "bytes": 5080,
-      "sha256": "6436d47c39f012dffc0a7814b275ddf80c9bd800a637b0267a61da5facee5cb2"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-17-plateforme-coordination.html",
-      "bytes": 17500,
-      "sha256": "01ad4144ed77804f3ed41ed2b7d88698a2bf5b835f2d9152fcbcac69a741ada5"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-17-relais-a2a.html",
-      "bytes": 5824,
-      "sha256": "c65b19bc30a3549085ae2a4443392737e6b675a7468911e154fd1dcf163826db"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-18-acces-guide-wallets.html",
-      "bytes": 14893,
-      "sha256": "89f48ffd2d1ec0779e5f2f07b6ddfc87d08fe6111cb29205f054ddb085807a68"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-18-authentification-optionnelle.html",
-      "bytes": 13568,
-      "sha256": "920fcd629bb8ca223e9f4f04c5fb2350646379fcc679e2d127b4ca4221081b2a"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-18-canaux-et-outils-agents.html",
-      "bytes": 9433,
-      "sha256": "de4faac04bf47571264e7456fe27d16b3edef3d4a59c94c07b6d831a3dfc8f4a"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-18-connexion-simple-et-restauration.html",
-      "bytes": 7365,
-      "sha256": "1584e4d00b6d725c04851e38bd6139d39b12a15daa4ad6a612c85cd6a5460a14"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-18-delegation-approbations-multiappareil.html",
-      "bytes": 16219,
-      "sha256": "906ff33915f2d4ddc9578c472a262919a3b0585ce40c6065fdce8f1665f33ecd"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-18-distribution-internet-intranet.html",
-      "bytes": 8166,
-      "sha256": "25462e926b2d31b8dfd12f39fc2ce76a74b25a1b893f7c160411f8653fab547f"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-18-parcours-identite-recuperation.html",
-      "bytes": 11425,
-      "sha256": "be5e4adfc8f1217bd6fde21e0c77cb389d1743f699e20667da546f232439d604"
-    },
-    {
-      "path": "documentation/04-livrables/2026-10-18-revue-globale-et-qualification.html",
-      "bytes": 7016,
-      "sha256": "ffed3c9050c109fe1194b852155cf1f8a339ca00cc7db364f006abb8bc9d0024"
-    },
-    {
-      "path": "documentation/04-livrables/api-reference.html",
-      "bytes": 13073,
-      "sha256": "7979079480ff820fa170350799ce70f2be78d3143278fe4b9825beb0190d8f4c"
-    },
-    {
-      "path": "documentation/04-livrables/contrats-api-mcp-a2a.html",
-      "bytes": 5706,
-      "sha256": "f1b1214e0e418c9979a0dc14629fd8578bf0c83a3887f1a681f9cb3f60033048"
-    },
-    {
-      "path": "documentation/04-livrables/feuille-de-route-integration.html",
-      "bytes": 13040,
-      "sha256": "286b1760776dfacf86ed73558c51e49faf9504f98ae9ebb49cda0ad8d21ceafe"
-    },
-    {
-      "path": "documentation/04-livrables/guide-administration.html",
-      "bytes": 6231,
-      "sha256": "259729502be754ca80bbd31f7767ee500ac87a18dfd23bbc2ddd9686eeea8849"
-    },
-    {
-      "path": "documentation/04-livrables/guide-utilisateur.html",
-      "bytes": 12772,
-      "sha256": "12d9d11bc103ad596db5f2bdd112b84fc24132d7bba00eb8effb884ab142f800"
-    },
-    {
-      "path": "documentation/04-livrables/identite-locale.html",
-      "bytes": 4894,
-      "sha256": "90663b51bd80d6dde5618f61f7af2c68ea78bc45ae38639723de65d7b305ed05"
-    },
-    {
-      "path": "documentation/04-livrables/rapport-recette.html",
-      "bytes": 9512,
-      "sha256": "eec74e12d0610d4627261b10a2ad2573e1a71fe4d92ca390b3703ffdd07ef36a"
-    },
-    {
-      "path": "documentation/04-livrables/refonte-interface-humaine.html",
-      "bytes": 6013,
-      "sha256": "9b1189568e71afe284f188b8915dd77e9cb1f95c5740aac7102c88ae477b301e"
-    },
-    {
-      "path": "documentation/06-conception-ux/01-analyse-utilisateurs.html",
-      "bytes": 12380,
-      "sha256": "f5841217d8dcc06bded60e4f04cb9d9858be0d307cea51ea20ae82972636a27f"
-    },
-    {
-      "path": "documentation/06-conception-ux/02-architecture-parcours.html",
-      "bytes": 109099,
-      "sha256": "2693bfca0663acaff24217cf61b46b361f12d6e98935f5aaf5aec09d8563543c"
-    },
-    {
-      "path": "documentation/06-conception-ux/03-design-system.html",
-      "bytes": 24952,
-      "sha256": "83819bcd977689cabf3ea3caf37f19786edc0b9b13898aeeedada083d2337d8c"
-    },
-    {
-      "path": "documentation/06-conception-ux/inventaire-ecrans.json",
-      "bytes": 68412,
-      "sha256": "dac9276656d734cf4764c9928e33411c638fcbe7c3ab5b1f0fd45a0855f8c02f"
-    },
-    {
-      "path": "documentation/06-conception-ux/maintenance-interface.html",
-      "bytes": 7567,
-      "sha256": "3ea13cd8d787acbdbd21945b78daa731129f78345ad39f855c8fc1fea04179e4"
+      "path": "web/walletconnect.js",
+      "bytes": 4145,
+      "sha256": "acb40f1a2a8e6d4a0262177b58297968c52c8a4f7f8244846bb8b6a76fdc6f4f"
     }
   ],
   "excluded": [
