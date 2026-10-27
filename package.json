@@ -41,7 +41,7 @@
     "export:public": "node scripts/export-public.mjs"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.32.1",
+    "@modelcontextprotocol/sdk": "1.32.2",
     "@simplewebauthn/browser": "14.0.0",
     "@simplewebauthn/server": "14.0.3",
     "@walletconnect/sign-client": "2.26.0",
